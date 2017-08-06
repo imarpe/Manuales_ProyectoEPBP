@@ -1,0 +1,2779 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% % % % % % % % % % % % % % % % % % % % % % % % %  
+% Nombre del trabajo, 
+% título,
+% autores
+% fechas, 
+% comentarios, etc.
+%
+% Plantilla creada por aristarco.cjb.net
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\documentclass[a4paper,oneside,11pt]{book} 
+\usepackage[spanish]{babel} % espanol
+\usepackage[latin1]{inputenc} % Caracteres con acentos. 
+\usepackage{latexsym} 
+\usepackage{footnote}
+\usepackage{multirow, array}
+\usepackage{longtable}
+%\usepackage{tablefootnote}
+\usepackage{endnotes}
+\usepackage{graphicx} % Inclusión de gráficos. Soporte para \figura (más abajo)
+ \usepackage{pdflscape}
+%\usepackage{lscape}
+\usepackage[T1]{}
+\usepackage[pdftex=true,colorlinks=true,linkcolor = black,plainpages=false]{hyperref} % Soporte hipertexto
+\oddsidemargin = 0.4 cm
+\textwidth = 15.6 cm
+\textheight= 22.5 cm
+\topmargin = - 0.04 cm
+% Título, autor(es), fecha. 
+
+%http://en.wikibooks.org/wiki/LaTeX/Page_Layout
+%\makesavenoteenv{tabular}
+%\makesavenoteenv{table}
+\begin{document}
+\begin{titlepage}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=8cm]{imagen_Seguimiento/logo.png}
+\end{figure}
+
+
+
+
+\begin{center}
+\Large \textbf{IMARPE}\\
+\vspace*{0.1in}
+\large {DIRECCIÓN GENERAL DE INVESTIGACIONES DE RECURSOS PELÁGICOS} \\ 
+
+\end{center}
+
+\vspace*{0.6in}
+\begin{large}
+\end{large}
+\vspace*{0.2in}
+\begin{Large}
+\begin{center}
+\rule{150mm}{0.3mm}\\
+\huge {\textbf{MANUAL PARA LA DIGITACIÓN DE INFORMACIÓN BIOLÓGICA- PESQUERA EN EL IMARSIS}} \\
+\rule{150mm}{0.3mm}\\
+\end{center}
+\end{Large}
+\vspace*{0.1in}
+\begin{large}
+\end{large}
+\begin{center}
+\vspace*{0.1in}
+\vspace*{0.1in}
+\begin{large}
+\Large {Marzo - 2015}
+\end{large}
+\end{center}
+\end{titlepage}
+
+
+
+
+\sloppy % suaviza las reglas de ruptura de líneas de LaTeX
+\frenchspacing % usar espaciado normal después de '.'
+\pagestyle{headings} % páginas con encabezado y pie básico
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Comando: 
+% \figura{nombre-fichero}{argumentos}{título}{etiqueta} 
+% Resultado: 
+% Inserta una figura. "La figura~\ref{etiqueta} muestra..." permite 
+% referenciar la figura desde el texto. 
+% argumentos: width=Xcm,height=Ycm,angle=Z 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\newcommand{\figura}[4]{
+  \begin{figure} 
+  \begin{center} 
+  \includegraphics[#2]{#1} 
+  \caption{#3} 
+  \label{#4} 
+  \end{center} 
+  \end{figure}} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Entorno: 
+% \begin{tabla}{título}{etiqueta} 
+% ... (contenido tabla) 
+% \end{tabla} 
+% Resultado: 
+% Inserta una tabla. 
+% Contenido tabla se define mediante un entorno 'tabular'. 
+% "Tabla~\ref{etiqueta}" permite referenciar la tabla. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\newenvironment{tabla}[2]{ 
+  \begin{table} 
+  \begin{center} 
+  \caption{#1} 
+  \label{#2}}{\end{center} 
+  \end{table}} 
+
+
+
+
+\renewcommand{\contentsname}{CONTENIDO} 
+\renewcommand{\partname}{Parte} 
+\renewcommand{\chaptername}{Capítulo} 
+\renewcommand{\appendixname}{Apéndice} 
+\renewcommand{\bibname}{Bibliografía} 
+\renewcommand{\figurename}{Figura} 
+\renewcommand{\listfigurename}{Indice de figuras} 
+\renewcommand{\tablename}{Tabla} 
+\renewcommand{\listtablename}{Indice de tablas}  
+
+
+
+\tableofcontents 
+
+\chapter {Introducción}
+
+\begin{itemize}
+\item [] En el Perú, la tendencia de las capturas y longitudes medias se registra principalmente en los recursos costeros y demersales en su mayoría de la flota artesanal, a pesar de ello, la demanda creciente de la población y el boom de la gastronomía  peruana ejercen una gran presión de pesca sobre estos recursos.
+
+\item [] El IMARPE, actualmente es responsable de las investigaciones marinas realizadas en el Perú, lo que en el marco de sus funciones ha colectado información del ecosistema marino frente a Perú durante los últimos 50 años. Para el almacén digital de esta información se ha utilizado diversos soportes computacionales, algunos de los cuales se encuentran obsoletos, siendo imposible recuperarla. Aunado a esta situación, la limitación presupuestal almacenada en formato disco limitando su utilidad en el marco de las investigaciones que se realizan. Además, la falta de esta información en formato digital impide la efectividad de las medidas de ordenamiento pesquero y conservación de los recursos hidrobiológicos.
+
+\item [] Esta actividad que se encuentra financiada por los Derechos de Pesca y dirigido por el Área de Dinámica Poblacional y Evaluación de Recursos Pelágicos del IMARPE, pretende que la información ingresada sea usada y recuperada para realizar las estimaciones de los parámetros poblacionales y reproductivos por especie. Esta información será la base para elaborar y retroalimentar los Reglamentos de Ordenamiento en muchos casos inexistentes y desactualizados, al mismo tiempo, servirá para suministrar información y elaborar estudios con un enfoque ecosistémico contemplando la visión del IMARPE. Así mismo, el uso de amplias series de datos permitirá entender la dinámica a largo plazo del ecosistema y el efecto de los forzantes ambientes sobre el mismo.
+
+\item [] Finalmente, el presente manual describe de una manera práctica y clara, acerca de la digitación de la información histórica, biológica - pesquera, considerando que una buena información colectada y metodología empleada, así como el correcto ingreso de datos en el sistema de todos estos procedimientos, dependerá el éxito de las futuras investigaciones.
+
+\end{itemize}
+
+\newpage 
+
+\section{Objetivo general del proyecto}
+
+\begin{itemize}
+\item Recuperar la información histórica acerca de los recursos y pesquerías con el propósito de estimar indicadores biológicos - pesqueros que favorezcan el manejo sostenible de los recursos. 
+\end{itemize}
+
+
+\section{Objetivos del manual}
+
+ \begin{itemize}
+ \item Describir los procedimientos de manera detallada y clara, para la correcta digitación de los datos.
+ \item Brindar al digitador las herramientas necesarias como los conocimientos y criterios a considerar durante el ingreso de información.
+ \end{itemize}
+
+
+\section{Responsabilidades del digitador}
+
+\begin{itemize}
+\item Ingresar la información con la mayor seriedad posible, considerando la importancia de ésta para su posterior análisis y aplicación.
+\item Verificar la concordancia de la información almacenada en fichas y/o libros.
+
+
+
+\end{itemize}
+
+\chapter{Actividades en la digitación}
+
+\section{Digitación de información biológica - pesquera}
+
+
+\subsection{Muestreo biológico}
+\begin{itemize}
+\item [] El muestreo biológico es una actividad que se realiza después de la recolección del material biológico, es considerado un paso sumamente importante porque permite obtener información necesaria para alcanzar los objetivos propuestos en un estudio biológico - pesquero. La calidad de la información que se registra depende de la exactitud de los instrumentos de medida, las condiciones en que se tomaron las mediciones y de la calidad de la preservación de los órganos y estructuras óseas requeridas o destinadas para estudios especiales.
+\end{itemize}
+
+\subsection{Muestreo biométrico} 
+\begin{itemize}
+\item [] Es aquel que consiste en obtener información sobre la distribución de tallas de las especies presentes en las capturas. Este muestreo se realiza al azar, es decir sin escoger ningún pez por más grande o chico que sea y ello permite estimar el tamaño del stocks de peces y hacer recomendaciones sobre las maneras de como se puede extraer el recurso.
+ \end{itemize}
+
+
+\subsection{Desembarque}
+\begin{itemize}
+\item [] En dicho módulo se ingresa toda la captura no procesada y descargada en el puerto o caleta, independiente de la zona de extracción, generalmente se expresa en toneladas, el término \emph{no procesada} hace referencia a una captura en la cual no se realizó un muestreo biométrico.
+\end{itemize}
+
+
+ 
+\chapter {IMARSIS} 
+\label{ch:capitulo IMARSIS} 
+\begin{itemize}
+\item [] Esta sección permite que el usuario logre conocer los comandos necesarios para el ingreso y al acceso de información científica al IMARSIS. Antes de iniciar con la digitación de datos provenientes de las fichas, es necesario verificar la instalación correcta del IMARSIS PELÁGICO, que será visualizada a través de un ícono con acceso directo, visualizado en escritorio, así mismo se deberá verificar la instalación correcta del internet, ya que el sistema trabaja con conexión directa, de lo contrario no se podrá guardar ningún cambio.
+Si persistieran problemas con el usuario, conexión de internet o  con el sistema IMARSIS, comunicarse directamente con el Área Funcional de Informática, llamando al anexo 926. 
+\end{itemize}
+
+\section {¿Como ingresar al IMARSIS?}
+\label{sec:como-IMARSIS}
+\begin{itemize}
+\item\textbf{PASO 1:}\\
+Dirigirse al ícono \textbf{IMARSIS PELÁGICO} ubicado en el escritorio y hacer doble click.
+ \end{itemize}
+ 
+ \begin{figure}[!h]
+ \begin{center} 
+\fbox{\includegraphics[scale=0.7]{imagen_Seguimiento/1.jpg}}
+ \caption{Ícono del IMARSIS}
+\end{center}
+ \end{figure}
+
+\begin{itemize}
+\item\textbf{PASO 2:} \\
+Una vez abierto el ícono \textbf{IMARSIS PELÁGICO}, aparecerá una ventana con el acceso al sistema \textbf{IMARSIS}, solicitando los siguientes datos: \\
+\subitem\textbf{Usuario:} Nombre y apellido del digitador.
+\subitem\textbf{Contraseña:} DNI del usuario, será visualizado en modo clave.
+\subitem\textbf{Módulo:} Pelágicos - Seguimiento pesquería
+\end{itemize}
+
+\begin{figure} [!h]
+\begin{center}
+\fbox{\includegraphics[scale=0.45]{imagen_Seguimiento/2.jpg}}
+ \caption{Acceso al sistema IMARSIS }
+\end{center}
+ \end{figure}
+  \begin{itemize}
+  
+  \newpage
+  \item\textbf{PASO 3:}\\
+ Luego de haber ingresado al sistema de \textbf{IMARSIS}, aparecerán dos opciones activas:
+ \subitem \textbf{HERRAMIENTAS:} 
+ \begin{itemize}
+ 
+ \item [] Contiene información acerca de las embarcaciones, el estado actual y datos del propietario, así como también cuenta con el registro de especies, fábricas y desembarques.
+ \end{itemize}
+ 
+ 
+ \subitem \textbf{PROCESO:}
+ \begin{itemize}
+ \item[] Contiene información acerca de diversos procesos como el biológico, biométrico y desembarques.
+ \end{itemize} 
+ 
+ 
+ \begin{enumerate}
+\item\textbf{PELÁGICO: BIOLÓGICO }= Para el ingreso de fichas biológicas
+ \item\textbf{PELÁGICO: BIOMÉTRICO} = Para el ingreso de fichas biométricas
+ \item\textbf{PELÁGICO: DESEMBARQUE} = Para el ingreso de fichas que carecen de un registro biométrico (longitudes y pesos)
+ \end{enumerate}
+   \end{itemize}
+   \begin{figure} [!h]
+ \begin{center}
+ \fbox{\includegraphics[scale=0.45]{imagen_Seguimiento/3.jpg}}
+  \caption{Selección del proceso}
+ \end{center}
+  \end{figure}
+ 
+ 
+ 
+ 
+\chapter {Ficha de muestreo biológico} 
+\section{¿Cómo ingresar a muestreo biológico?}
+
+\begin{itemize}
+\item Hacer click en el ícono IMARSIS.
+ \item Ingresar el usuario y contraseña como lo indica la sección: \textbf{\ref{sec:como-IMARSIS}} 
+ \item Posteriormente, visualizados los módulos, seleccionar la \textbf{OPCIÓN}: Proceso
+ \item {Finalmente hacer click en el proceso:}
+\end{itemize}
+ 
+  \begin{center}
+ \fbox{\textbf{PELÁGICO - BIOLÓGICO}}
+ \end{center}
+
+ 
+ \begin{figure}[!h]
+             \begin{center}
+            \fbox{\includegraphics[scale= 0.8]{imagen_Seguimiento/opcion.png}}
+             \caption{Ingreso al módulo: Pelágico - Biológico.}
+             \end{center}
+              \end{figure}
+
+\newpage 
+ 
+ \section{Partes de una ficha de muestreo biológio:}
+ 
+ 
+ 
+ \begin{figure}[!h]
+  \begin{center}
+  \includegraphics[scale= 0.56]{imagen_Seguimiento/partebiologica.jpg}
+  \caption{Partes de una ficha biológica.}
+    \end{center}
+   \end{figure}
+ 
+ \begin{enumerate}
+ \item \textbf{Fecha }
+ \begin{enumerate}
+\item \textbf{Fecha inicio:} Día de inicio del muestreo biológico.
+\item \textbf{Fecha final:} Día final del muestreo biológico.
+
+ \begin{figure}[!h]
+             \begin{center}
+            \fbox{\includegraphics[scale= 0.8]{imagen_Seguimiento/fecha.png}}
+             \caption{Fecha de inicio y final.}
+             \end{center}
+              \end{figure}
+
+
+ \end{enumerate}
+ \textbf{\item Lugar de desembarque:} Llamado también lugar de procedencia, que hace referencia al nombre del puerto en donde se desembarcó.
+ 
+  \begin{figure}[!h]
+              \begin{center}
+             \fbox{\includegraphics[scale= 0.7]{imagen_Seguimiento/lugar.png}}
+              \caption{Casilla de lugar de desembarque.}
+              \end{center}
+               \end{figure}
+ 
+ 
+ \textbf{\item Especie:} Especie a la cual pertenece el muestreo
+  biológico.
+  
+ 
+    \begin{figure}[!h]
+     \begin{center}
+    \fbox{\includegraphics[scale= 1]{imagen_Seguimiento/especie.png}}
+     \caption{Casilla de especie.}
+       \end{center}
+      \end{figure}
+  
+  
+ \textbf{\item N° de muestra:} Es el código que se le asigna al muestreo.
+ 
+ 
+     \begin{figure}[!h]
+      \begin{center}
+     \fbox{\includegraphics[scale= 1]{imagen_Seguimiento/muestra.png}}
+      \caption{Casilla de muestra.}
+        \end{center}
+       \end{figure}
+ 
+
+ \textbf{\item Embarcación:} Llamado también nombre de la lancha.
+ 
+ \begin{figure}[!h]
+       \begin{center}
+      \fbox{\includegraphics[scale= 1]{imagen_Seguimiento/embarcacion.png}}
+       \caption{Casilla de embarcación.}
+         \end{center}
+        \end{figure}
+ 
+ \textbf{\item Tipo de medición:} Se refiere a la medición hasta el nivel de la horquilla o si la longitud tomada fue total.
+ \begin{enumerate}
+ \item \textbf{Longitud Total:}	Abarca desde el extremo del hocico hasta el lóbulo más grande de la aleta caudal (cola). Generalmente para esta longitud se utiliza la clase de longitud de medio centímetro y de un centímetro. 
+\item \textbf{Longitud a la Horquilla:} Desde el extremo del hocico hasta la hendidura o ángulo de la aleta caudal (cola). Se utiliza generalmente la clase de longitud de un centímetro.
+ 
+ \item \textbf{Sin dato:} En el caso de que la especie no se encuentre dentro de la tabla en donde figuran las especies con sus respectivas medidas.
+ \end{enumerate}
+ 
+ \newpage
+ 
+ 
+ 
+ 
+  \begin{figure}[!h]
+   \begin{center}
+  \fbox{\includegraphics[scale= 0.8]{imagen_Seguimiento/tiposdemedidas.jpg}}
+   \caption{Tipos de medición en el IMARSIS.}
+     \end{center}
+    \end{figure}
+ 
+ 
+ \begin{itemize}
+  \item[] El tipo de medición varía con respecto a algunas especies, se muestra el tipo de medición en la siguiente tabla.
+  
+  \end{itemize}
+  
+    
+  \begin{table} [!h]
+     \centering
+     \begin{tabular}{p{2cm} p{4cm} p{4cm} } 
+     \hline
+    ESPECIE &  TIPO DE LONGITUD & APROXIMACIÓN(cm)\\
+     \hline \hline
+     Anchoveta & Total &  0,5 \\
+     Sardina & Total &  1 \\
+     Jurel  & Total & 1\\
+     Caballa & A la horquilla & 1 \\
+     Bonito & A la horquilla & 1 \\
+     Samasa & Total & 0,5\\
+     Camotillo & Total & 0,5   \\
+    \hline\hline
+     \end{tabular}
+     \caption{Tipo de medición para cada especie.}
+     \label{tabla:autores}
+     \end{table}
+  
+ 
+ \textbf{\item Muestreador:} En algunos casos suele figurar en el extremo inferior con iniciales y en otros casos no, en el caso de no figurar, colocar como no definido.
+ 
+ \textbf{\item Observaciones:} Añadirla en el caso que figure en ficha, en su mayoría la información añadida es referida a la colecta de material. \\
+ 
+ 
+ \begin{figure}[!h]
+    \begin{center}
+   \fbox{\includegraphics[scale= 0.6]{imagen_Seguimiento/ancho.png}}
+    \caption{Medición total en anchoveta.}
+      \end{center}
+     \end{figure}
+  
+ 
+ \newpage
+ 
+ 
+ \textbf{\item Casillas de información biológica:}
+ \begin{enumerate}
+ \item \textbf{N°:} Indica el número en el orden de ingreso de los datos.
+ \item \textbf{Longitud (cm):} Casilla que contiene el rango de talla. 
+ \item \textbf{Peso total (g):} Peso del pez completo, sin eviscerar,  expresado e ingresado en gramos.
+ \item \textbf{Peso eviscerado (g):} Peso del pez, sin estómago, hígado y gónada.
+ \item \textbf{Peso cabeza:} Peso de la cabeza del pez, expresado en gramos.
+ \item \textbf{Grasa}: Es un indicador directo del grado de bienestar de la población, expresado en números cardinales.
+ \item \textbf{Vértebras:} Expresado en números cardinales, la cantidad de vértebras varía dependiendo de la especie.
+ \item \textbf{Con alimento:} Es referido al peso de estómago con alimento (g).
+ \item \textbf{Sin alimento:} Es referido al peso de estómago sin alimento(g).
+ \item \textbf{Descripción cualitativa:} Se añaden los hallazgos encontrados que acompañan al contenido estomacal.
+ \item \textbf{Sexo:} Define el sexo del espécimen.
+ 
+ \item [] En la casilla sexo, se muestran 5 opciones a seleccionar:
+ 
+ \begin{enumerate}
+ \item \textbf{Ambos sexos:} En el caso de que la ficha lo indique.
+ \item \textbf{Hembra:} Si el sexo del espécimen es hembra, esta información se ingresará como el número: \textbf{0}
+ \item \textbf{Determinado}
+ \item \textbf{Macho}: Si el sexo del espécimen es macho, esta información se ingresará como el número: \textbf{1}
+ \item \textbf{Sin dato:} En el caso de no figurar la información en ficha, colocar sin dato.
+ \end{enumerate}
+ 
+  \begin{figure}[!h]
+     \begin{center}
+    \fbox{\includegraphics[scale= 1.5]{imagen_Seguimiento/sexo.png}}
+     \caption{Casilla de sexo.}
+       \end{center}
+      \end{figure}
+   
+ \item \textbf{Madurez:} Información que permite saber si la especie ya logró alcanzar la capacidad para reproducirse, para la cual se define con un sistema de escalas a través de un análisis en gónadas cuya determinación depende del grosor, consistencia y color. Las escalas son ingresadas en números ordinales. Por ejemplo: 1,  2,  3, \dots, 7.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline  \textbf{ESPECIE} & \textbf{ESCALA}   \\ 
+\hline  Sardina &   1 al 8    \\ 
+\hline  Anchoveta &  1 al 6 \\ 
+\hline  Jurel & ??  \\ 
+\hline  Caballa & ?? \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{table}
+
+
+ \item \textbf{Longitud de gónadas:} Las longitudes en gónadas son ingresadas en milímetros (mm) y es posible que en las fichas la longitud haya sido registrada en (cm), para lo cual esto datos al ser ingresados al sistema, estas deben convertirse a (mm).
+ 
+ 
+ \begin{table}
+ \centering
+  \begin{tabular}{|c|c|}
+  \hline \textbf{cm}  & \textbf{mm} \\ 
+  \hline 5.9 & 59 \\ 
+  \hline 0.9 & 9 \\ 
+  \hline 0.5 & 5 \\ 
+  \hline 8.2 & 82 \\ 
+  \hline 
+  \end{tabular}
+  \caption{Conversión de \textbf{cm} a\textbf{ mm}.} 
+\end{table}
+ 
+ \item \textbf{Peso de gónadas:} El peso de gónadas es ingresado en gramos (g).
+ 
+ \item \textbf{Otolito:} El otolito sagital es el que se emplea para la determinación de la edad, esta información es ingresada en forma consecutiva con números cardinales. Por ejemplo: 1-2-3-4-5.
+
+
+  \begin{figure}[!h]
+     \begin{center}
+    \fbox{\includegraphics[scale= 1]{imagen_Seguimiento/oto.png}}
+     \caption{Casilla de otolito en el IMARSIS.}
+       \end{center}
+      \end{figure}
+   
+ \item \textbf{Área:} También llamado como área isoparalitoral, estas están representadas por un código de 4 dígitos y para lograr ser insertada en el IMARSIS, es necesario anteceder el número $ \textbf{0} $, por ejemplo: \textbf{01020}
+ 
+ \item \textbf{Tipo de pesquería:} 
+
+ \begin{enumerate}
+ \item \textbf{C.H.D}: Consumo Humano Directo, orientado para el consumo, esta información proviene de la ficha, cuya casilla se encuentra en el márgen inferior con el número\textbf{ 2 = consumo.}
+ 
+  
+ \item \textbf{C.H.D/I:} Consumo Humano Directo e Indirecto, en el caso que lo indique la ficha con el número \textbf{1 y 2}.
+ 
+ \item \textbf{C.H.I:} Consumo Humano Indirecto, tipo de pesquería industrial, que figura en la casilla inferior con el número \textbf{1= Industrial}.
+ 
+ \item \textbf{SIN DATO:} En el caso de no indicarlo.
+ 
+ \end{enumerate}
+ 
+ 
+  \begin{figure}[!h]
+      \begin{center}
+     \fbox{\includegraphics[scale= 1.5]{imagen_Seguimiento/pesca.png}}
+      \caption{Casilla de tipo de pesquería.}
+        \end{center}
+       \end{figure}
+ 
+ 
+ \item \textbf {Material de colecta}
+ \begin{itemize}
+ \item [] En caso de indicarlo en ficha, hacer click en la casilla de colecta y automáticamente se generará un check.
+ \item \textbf{Gónada}: En el caso de indicar colecta de gónada.
+ 
+
+ \begin{figure}[!h]
+       \begin{center}
+      \fbox{\includegraphics[scale= 1.3]{imagen_Seguimiento/check.png}}
+       %\caption{Casillas de colecta.}
+         \end{center}
+        \end{figure}
+
+ \item \textbf{Estómago:} En el caso de indicar la colecta de estómago. 
+ 
+ 
+ \begin{figure}[!h]
+        \begin{center}
+       \fbox{\includegraphics[scale= 1.3]{imagen_Seguimiento/estomago.png}}
+        %\caption{Casillas de colecta.}
+          \end{center}
+         \end{figure}
+ 
+ 
+ \item \textbf{Otolito:} En caso de indicar la colecta de otolito.
+ 
+ \begin{figure}[!h]
+         \begin{center}
+        \fbox{\includegraphics[scale= 1.3]{imagen_Seguimiento/otolito.png}}
+         %\caption{Casillas de colecta.}
+           \end{center}
+          \end{figure}
+ 
+ \item \textbf{Parásitos:} En el caso de indicar la colecta de parásitos.
+ 
+ \begin{figure}[!h]
+          \begin{center}
+         \fbox{\includegraphics[scale= 1.3]{imagen_Seguimiento/parasito.png}}
+          %\caption{Casillas de colecta.}
+            \end{center}
+           \end{figure}
+ 
+ 
+ \item \textbf{Escamas:} En el caso de indicar la colecta de escamas.
+ 
+  \begin{figure}[!h]
+           \begin{center}
+          \fbox{\includegraphics[scale= 1.3]{imagen_Seguimiento/escama.png}}
+           %\caption{Casillas de colecta.}
+             \end{center}
+            \end{figure}
+ 
+ \newpage
+ 
+ \item {\textbf{Peso de hígado:}} La información de peso de hígado no se encuentra disponible en los formatos por lo que es común que llenen esa casilla reemplazando una que no es de uso, por ejemplo.
+ 
+  \begin{figure}[!h]
+            \begin{center}
+           \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/higado.png}}
+            %\caption{Casillas de colecta.}
+              \end{center}
+             \end{figure}
+  
+ 
+ \item {\textbf{N° de Parásitos:}} La casilla de número de parásitos se adicionó para algunos casos encontrados en el muestreo biológico de los años 70 y 80, para jurel y caballa, por lo que no son datos que aparecen con frecuencia en fichas, sino son adicionales al muestreo. En el caso de figurar, digitarlo.
+ 
+  \begin{figure}[!h]
+             \begin{center}
+            \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/parasito12.png}}
+             %\caption{Casillas de colecta.}
+               \end{center}
+              \end{figure}
+   
+ 
+
+ \item {\textbf{Peso cabeza:}} Son formatos antiguos quienes contienen esta información, colocarlo en el caso de figurar en ficha.
+ 
+  \begin{figure}[!h]
+              \begin{center}
+             \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/cabe2.png}}
+              %\caption{Casillas de colecta.}
+                \end{center}
+               \end{figure}
+ 
+ \newpage
+ 
+ \item {\textbf{Grasa:}} La casilla que figura como grasa es también conocido como contenido graso, este es usado como un indicador directo del grado de bienestar de la población, los códigos de grasa varían de 1, 2 y 3.
+
+\begin{figure}[!h]
+           \begin{center}
+          \fbox{\includegraphics[scale= 1.3]{imagen_Seguimiento/grasa.png}}
+           %\caption{Casillas de colecta.}
+             \end{center}
+            \end{figure}
+ 
+ 
+\item [] \textbf{Niveles de grasas}: 
+
+ \begin{table} [!h]
+\centering
+ \begin{tabular}{p{1.5cm} p{5cm}} 
+ \hline \textbf{Código} &  \textbf{Definición del nivel de grasa} \\ 
+ \hline   1 & Capa de grasa mínima, coincide con la época de desove, ya que requiere mayor esfuerzo. \\ 
+ \hline   2 &  Capa de grasa media, después del desove, población en recuperación.\\ 
+ \hline   3 & Capa de grasa de mayor grosor, considerado como el mejor estado de la anchoveta, ideal para la industria de aceite.  \\ 
+ 
+ \hline 
+ \end{tabular} 
+ \caption{Niveles de grasa}
+    \label{tabla:autores}
+\end{table}
+
+
+\item [] \textbf{Casilla de grasa en ficha de muestreo biométrico:}
+
+\begin{figure}[!h]
+           \begin{center}
+          \fbox{\includegraphics[scale= 0.9]{imagen_Seguimiento/grasafoto.png}}
+           %\caption{Casillas de colecta.}
+             \end{center}
+            \end{figure}
+
+\newpage
+
+ \item {\textbf{Vértebra:}} Los anteriores formatos añadían la cantidad de vértebras como una forma de ayudar a la identificación de la especie.
+ 
+\item [] Forma en la que figura la casilla de vértebra en ficha:
+
+\begin{figure}[!h]
+           \begin{center}
+          \fbox{\includegraphics[scale= 0.8]{imagen_Seguimiento/vertebras.png}}
+           \caption{\textbf{CASO 1}: Casillas de vértebra en ficha biométrica.}
+             \end{center}
+            \end{figure}
+
+\begin{figure}[!h]
+           \begin{center}
+          \fbox{\includegraphics[scale= 0.8]{imagen_Seguimiento/vertebraS12.png}}
+           \caption{\textbf{CASO 2}: Casillas de vértebra en ficha biométrica.}
+             \end{center}
+            \end{figure}
+
+ \end{itemize} 
+ \end{enumerate}
+ \end{enumerate}
+
+
+ \newpage
+ 
+ 
+ 
+
+\section {Comandos utilizados para la introducción de información:}
+
+\begin{itemize}
+
+\item Para el ingreso de información, las casillas tienen diversos comandos, las cuales se deberá tener en cuenta para la correcta digitación.
+
+\end{itemize}
+
+\begin{figure}[!h]
+      \begin{center}
+     \fbox{\includegraphics[scale= 0.7]{imagen_Seguimiento/nueva.png}}
+      \caption{Para ingresar una ficha nueva de información biológica.}
+        \end{center}
+       \end{figure}
+ 
+ 
+\newpage
+ 
+\subsection {Comandos para añadir información general}
+
+\begin{itemize}
+  \item Para crear un registro nuevo de una ficha biológica, primero deberá añadirse el lugar de desembarque, haciendo doble click en la casilla:  \textbf{LUGAR DE DESEMBARQUE.}
+  
+    \end{itemize}
+
+\begin{figure}[!h]
+      \begin{center}
+     \fbox{\includegraphics[scale= 0.6]{imagen_Seguimiento/puertoo.png}}
+      \caption{Casillas de colecta.}
+        \end{center}
+       \end{figure}
+
+\begin{itemize}
+  \item Después de haber ingresado correctamente la fecha y el lugar de desembarque, deberá dirigirse a la casilla azul, denominada: \textbf{NUEVO REGISTRO.}
+    \end{itemize}
+
+
+\begin{figure}[!h]
+      \begin{center}
+     \fbox{\includegraphics[scale= 1.0]{imagen_Seguimiento/nuevore.png}}
+      \caption{Casilla de nuevo registro.}
+        \end{center}
+       \end{figure}
+
+\newpage
+
+
+\begin{itemize}
+  \item Una vez realizado un click en nuevo registro, las casillas modificarán su color, de gris a blanco, por lo que automáticamente el sistema solicitará la siguiente información, la casilla \textbf{ESPECIE}.
+    \end{itemize}
+
+\begin{figure}[!h]
+      \begin{center}
+     \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/casillaespecie.png}}
+      \caption{ Insertar información de la especie.}
+        \end{center}
+       \end{figure}
+ 
+ \begin{itemize}
+      \item Y así, seguidamente después de haber añadido la especie, las siguientes casillas de llenado serán N° de muestra, embarcación, fecha final, tipo de medición, muestreador, observaciones y las casillas de información biológica.
+        \end{itemize}
+ 
+ 
+ \begin{figure}[!h]
+       \begin{center}
+      \fbox{\includegraphics[scale=0.65]{imagen_Seguimiento/emcabezado12.png}}
+       \caption{Insertar información de la especie.}
+         \end{center}
+        \end{figure}
+ 
+ \newpage
+ \subsection {Formatos de fichas de muestreo biométrico}
+ 
+  \begin{itemize}
+  \item Se detallan los diferentes formatos que se han identificado hasta la fecha. Los formatos pertenecientes a los años 2000 a 2014 son los más completos y con información bastante clara, resumida y concisa, la cual su llenado no se hace dificultoso, ya que cuenta con las mismas casillas que se encuentran en el sistema, por lo que no es necesario realizar interpretaciones como en otros casos de formato.
+  
+  
+ \subsubsection{Formato del año 2000-2014}
+ 
+  \begin{figure}[!h]
+        \begin{center}
+       \fbox{\includegraphics[scale=0.75]{imagen_Seguimiento/muestreo2000.png}}
+        \caption{Insertar información de la especie.}
+          \end{center}
+         \end{figure}
+ 
+ 
+ \newpage
+ \subsubsection{Formato del año 1990-1999}
+ \item  Estos formatos contienen información adicional, que no figura en el formato actual, pero sin embargo sus casillas se encuentran habilitadas en la interfaz del Imarsis, por si se presentarán los casos.
+  \begin{figure}[!h]
+         \begin{center}
+        \fbox{\includegraphics[scale=0.88]{imagen_Seguimiento/muestreo90.png}}
+         \caption{Insertar información de la especie.}
+           \end{center}
+          \end{figure}
+ 
+ 
+ \newpage
+ 
+ \subsection{Formato año 1980-1990:} 
+ \item Los formatos de muestreo biológico para estos años muestran como título el nombre denominado "Rendimiento", la ficha carece de pocas casillas de información en el encabezado.
+ 
+ \begin{figure}[!h]
+          \begin{center}
+         \fbox{\includegraphics[scale=0.83]{imagen_Seguimiento/muestreo60.png}}
+          \caption{Insertar información de la especie.}
+            \end{center}
+           \end{figure}
+ 
+ \newpage
+  
+  \subsection{Formato año 1970-1980}
+  \item El formato de ficha de muestreo biológico para estos años, maneja un estructura simple y sencilla, los únicos inconvenientes encontrados en estas fichas, es que los cuadros no son respetados como la casilla que la encabeza, es decir hay ocasiones que en el casilla grasa agregan peso de gónadas o otolitos, entre otras casillas de información.
+  
+  \begin{figure}[!h]
+           \begin{center}
+          \fbox{\includegraphics[scale=0.9]{imagen_Seguimiento/muestreo40.png}}
+           \caption{Insertar información de la especie.}
+             \end{center}
+            \end{figure}
+ 
+  \end{itemize}
+ 
+ \newpage
+ 
+ 
+ \section{Casos reportados en fichas de muestreo biológico}
+ 
+ \begin{itemize}
+ 
+ \item [] \textbf{CASO 1}: No tengo el nombre del muestreador.
+ \begin{itemize}
+ \item [] En algunos casos es posible que el nombre del muestreador no esté escrito en la ficha, o en otro caso solo esté abreviado, siendo así el caso de no lograr coincidir con el muestreador, puede seleccionarse la opción de muestreador: \textbf{NO DEFINIDO}, presionando \textbf{F1}.
+ \end{itemize}
+ \end{itemize}
+ 
+ \begin{figure}[!h]
+            \begin{center}
+           \fbox{\includegraphics[scale=0.9]{imagen_Seguimiento/muestreador.png}}
+           %1 \caption{Insertar información de la especie.}
+              \end{center}
+             \end{figure}
+              
+ \begin{itemize}
+ \item \textbf{CASO 2:} Formas de encontrar el check de colecta.
+ \begin{enumerate}
+ \item [] En los diversos formatos de muestreo biológico, es muy peculiar ver diferentes formas de marcajes en la casilla de colecta de material, por lo que se muestra todos los casos de marcaje que merecen un check en la casilla.
+ 
+ \item[] \textbf{Forma 1}: La palabra sí en la sección de gónada, indica que fue colectada.
+ 
+
+  \begin{figure}[!h]
+             \begin{center}
+            \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/si.png}}
+            %\caption{La palabra Sí, indica la colecta del material.}
+               \end{center}
+              \end{figure}
+ 
+ \item[] \textbf{Forma 2}: La simbología del check en la casilla de otolito, indica que el otolito fue colectado.
+ 
+ \begin{figure}[!h]
+              \begin{center}
+             \fbox{\includegraphics[scale=0.8]{imagen_Seguimiento/otolitosi.png}}
+             %\caption{La palabra Sí, indica la colecta del material.}
+                \end{center}
+               \end{figure}
+ 
+ \newpage
+ 
+ 
+  \item[] \textbf{Forma 3}: La simbología: \textbf{X} en la casilla de otolito, indica que otolito fue colectado.
+ 
+ \begin{figure}[!h]
+               \begin{center}
+              \fbox{\includegraphics[scale=0.5]{imagen_Seguimiento/equis.png}}
+              
+                 \end{center}
+                \end{figure}
+ 
+ \end{enumerate}
+ 
+ \item \textbf{CASO 3:} Otolito derecho e izquierdo.
+ 
+ \begin{itemize}
+
+ \item [] Hay alguno formatos que muestran la casilla de otolitos la númeración 1 y 2, pues esto hace referencia a otolito derecho = 1 y otolito izquierdo = 2.
+ \end{itemize}
+ 
+ 
+\begin{figure}[!h]
+                \begin{center}
+               \fbox{\includegraphics[scale=0.5]{imagen_Seguimiento/oto12.png}}
+              
+                  \end{center}
+                 \end{figure}
+ 
+  
+ \item \textbf{CASO 4:} Longitud y ancho de gónadas. 
+ \begin{itemize}
+ 
+ \item [] Se han presentado casos en los que se han registrado, la medición del largo y ancho de gónadas, por lo que visualizando el diseño del Imarsis solo permite el ingreso de la longitud más no el ancho, por lo que el ancho será un dato que no se digitará.
+ 
+ \begin{enumerate}
+ \item  [] Considerando el caso de las longitud de gónadas, solo se deberá digitar el dato de 11.1 ya que el 1.7 sería el ancho de gónada, por lo tanto el ancho no se deberá digitar ya que el ancho, no es un dato que ayude al análisis.
+ \end{enumerate}
+ \end{itemize}
+ 
+ \begin{figure}[!h]
+                 \begin{center}
+                \fbox{\includegraphics[scale=0.5]{imagen_Seguimiento/ancho12.png}}
+                   \end{center}
+                  \end{figure}
+ 
+ \newpage
+
+ \item \textbf{CASO 5:} Tipo de pesquería. 
+ \begin{itemize}
+ \item [] Las siglas CHD y CHI significan el tipo de pesquería también llamado tipo de flota, que en este caso se divide en Consumo Humano Directo(CHD) = 1, Consumo Humano Indirecto (CHI)= 2 y el Consumo de Humano Directo e Indirecto (CHD/I) = 3, por lo que la casilla posterior al área, tiene las siglas \textbf{PESQU.}, que quiere decir el tipo de pesquería designado para el muestreo, en dicha columna como se puede observar en ficha solo se podrá descifrar a través de los números colocados. En algunas fichas se muestra la leyenda de los números, como por ejemplo:
+ 
+ 
+ \begin{figure}[!h]
+                      \begin{center}
+                     \fbox{\includegraphics[scale=1]{imagen_Seguimiento/flota.png}}
+                     
+                        \end{center}
+                       \end{figure}
+      \item [] En este caso la columna flota señala al número \textbf{2} que quiere decir que el muestreo biológico proviene de una captura destinada a Consumo de Humano Directo (CHD).
+ 
+ 
+ 
+ \begin{figure}[!h]
+                   \begin{center}
+                  \fbox{\includegraphics[scale=0.9]{imagen_Seguimiento/area.png}}
+                  \item [] Caso de ficha sin leyenda, indicando el tipo de flota a través del número \textbf{2}, que indica CHD.
+                     \end{center}
+                    \end{figure}
+   
+    \begin{figure}[!h]
+                      \begin{center}
+                     \fbox{\includegraphics[scale=0.4]{imagen_Seguimiento/tipo.png}}
+                     
+                    \item [] Considera que algunas fichas no guardan el formato en donde precisa los códigos ni en columnas y ni en la parte superior, por lo que el tipo de pesquería se ubica en la parte superior,en este caso el tipo de pesquería es 1 es decir C.H.I, como señalado en el ejemplo.
+                        \end{center}
+                       \end{figure}
+   
+   
+   
+   
+     \begin{figure}[!h]
+                        \begin{center}
+                       \fbox{\includegraphics[scale=1.5]{imagen_Seguimiento/tipopes.png}}
+                       \item [] Frente a los casos presentados, se muestran las siguientes opciones habilitadas en el sistema Imarsis.
+                          \end{center}
+                         \end{figure}
+        
+   \end{itemize}
+ 
+ \newpage
+ 
+ \item\textbf{ CASO 6:} Casilla de sexo con información duplicada. 
+ 
+ \begin{itemize}
+ 
+ 
+ \item [] Para la digitación de la casilla sexo y estadío sexual, es muy común ver que la información suele ser duplicada en las casillas del lado, por ello la información es  duplicada con una simbología mucho más práctica,con el fin de facilitar su análisis ya que en términos de sexo: 
+ \item [] Para recordar el caso que los machos se grafican así y por consiguiente son el número\textbf{\textbf{ 1}}.
+  
+  \begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.26]{imagen_Seguimiento/mach.jpg}}
+              
+                      \end{center}
+                     \end{figure}
+    
+
+ \item [] Mientras que las hembras se grafican de la siguiente manera y por consiguiente son el número \textbf{0}
+ 
+ \begin{figure}[!h]
+                     \begin{center}
+                    \fbox{\includegraphics[scale=0.21]{imagen_Seguimiento/hem.jpg}}
+                       \end{center}
+                      \end{figure}
+
+ \item [] El caso a que nos referimos es aquel que la simbología del macho y hembras es traducida en números como el 1 y 0, mientras que los estadíos sexuales que son escritos en número romanos pasan a la siguiente casilla en número ordinarios.
+ \item [] Finalmente es presentado como un caso, con el que no se debe confundir la información duplicada de las casilla, como el número de vértebras, que como se muestra en la figura, no hay información de la casilla.
+ 
+ 
+  \begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.7]{imagen_Seguimiento/sexotra.png}}
+               
+                      \end{center}
+                     \end{figure}
+                     
+                    
+                     
+                     
+ \item [] Recordar que la información final en el sistema debe ingresarse así, es decir el sexo que figure con el nombre completo y los estadíos sexuales (madurez) con números ordinarios.
+ 
+ \end{itemize}
+ 
+  \begin{figure}[!h]
+                     \begin{center}
+                    \fbox{\includegraphics[scale=1]{imagen_Seguimiento/casillama.png}}
+                
+                       \end{center}
+                      \end{figure}
+ 
+ 
+ \newpage
+ 
+ \item \textbf{CASO 7:} Descripción cuantitativa. 
+ 
+ \begin{itemize}
+
+ \item [] La casilla descriptiva es de suma importancia, porque permite tomar los datos a detalle de lo encontrado en el contenido estomacal, como por ejemplo.
+
+   \begin{figure}[!h]
+                      \begin{center}
+                     \fbox{\includegraphics[scale=0.7]{imagen_Seguimiento/estomacal.png}}
+                     \caption{Descripción cuantitativa a detalle encontrado en ficha}
+                 
+                        \end{center}
+                       \end{figure}
+
+\newpage
+
+\item [] Otros casos encontrados son como el que se muestra con solo la palabra: \textbf{Copépodos}, la cual esta descripción sería la misma forma para las próximas filas.
+
+
+  \begin{figure}[!h]
+                      \begin{center}
+                     \fbox{\includegraphics[scale=0.45]{imagen_Seguimiento/descrip.png}}
+                        \end{center}
+                       \end{figure}
+
+\item [] De la misma manera las descripciones, vienen manejando el mismo esquema, es decir primero solo describen completamente lo encontrado y posterior a ello los checks significan la replicación de lo escrito en la primera fila.
+ \begin{figure}[!h]
+                     
+
+ \begin{center}
+                     \fbox{\includegraphics[scale=0.45]{imagen_Seguimiento/cualitati.png}}
+                        \end{center}
+                       \end{figure}
+
+\item [] Otras formas de poder encontrar la descripción cualitativa del contenido estomacal, es con la combinación de porcentajes como en 2 \% y 98 \%.
+
+\begin{figure}[!h]
+ \begin{center}
+                     \fbox{\includegraphics[scale=0.45]{imagen_Seguimiento/cuanti.png}}
+                        \end{center}
+                       \end{figure}
+
+\newpage
+
+\item [] Finalmente debe estar escrito en el sistema de la siguiente forma: 
+
+\begin{figure}[!h]
+ \begin{center}
+                     \fbox{\includegraphics[scale=0.8]{imagen_Seguimiento/descripc.png}}
+                        \end{center}
+                       \end{figure}
+
+\end{itemize}
+
+
+\item{\textbf{CASO 8:}} Casillas utilizadas con diferente contenido.
+\begin{itemize}
+
+\item [] Existen formatos en los que las casillas con un título definido, son empleados para almacenar otro tipo de información.Los siguientes casos son: 
+
+
+
+\item \textbf{Indice Gonadosomático (I.G.S)}
+
+
+\begin{figure}[!h]
+ \begin{center}
+\fbox{\includegraphics[scale=0.8]{imagen_Seguimiento/igs.png}}
+                       \caption{Cuadro de N° de Parásitos.}
+                        \end{center}
+                       \end{figure}
+
+\item  [] En este caso la casilla de N° de Parásitos ha sido utilizada para llenar otra información como el IGS (Indice Gonadosomático), la cual hay que considerar que el IGS, es expresado en decimales , mientras que si la casilla hubiese contenido la información del N° de Parásitos, este se debería expresar en cantidades exactas como (1, 2, 3).
+
+\newpage
+
+\item \textbf{Peso eviscerado} 
+
+\begin{figure}[!h]
+ \begin{center}
+\fbox{\includegraphics[scale=0.8]{imagen_Seguimiento/eviscerado.png}}
+                       \caption{Cuado de N° de vértebras con información del peso eviscerado.}
+                        \end{center}
+                       \end{figure}
+\item [] Hay que tomar bastante atención con las cantidades que figuran en ficha, supongamos estos datos que se encuentran en la casillas del N° de vértebras, pero según la casilla tachada corresponde a peso eviscerado, ya que si bien las cantidades como 305, 309 ,324, no pueden encajar con números de vértebras.\\
+
+
+
+\item \textbf{Peso de hígado}
+
+
+\begin{figure}[!h]
+ \begin{center}
+\fbox{\includegraphics[scale=0.8]{imagen_Seguimiento/higado.png}}
+                       \caption{Cuadro de N° de parásitos con información del peso de hígado.}
+                        \end{center}
+                       \end{figure}
+
+\item [] De la misma forma la casilla del N° de Parásitos es utilizada para almacenar otro tipo de información como es el peso del hígado.
+
+\end{itemize}
+
+\newpage
+
+\item [] \textbf{CASO 9:} Área isoparalitoral.
+
+\begin{itemize}
+
+\item [] Esta información se puede localizar en diversas partes de la ficha, lo que si es muy importante conocer que es un información expresada a partir de  4 dígitos. Se muestra los siguiente casos en donde se puede encontrar escrita esta información en ficha.
+
+
+\item [] Uno de los casos como debajo de su casilla.
+
+
+\end{itemize}
+
+\begin{figure}[!h]
+ \begin{center}
+\fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/areamu.png}}
+                       \caption{Casilla del área isoparalitoral}
+                        \end{center}
+                       \end{figure}
+
+\item [] Ubicada dentro de la casilla denominada "Área de Pesca".
+\begin{figure}[!h]
+ \begin{center}
+\fbox{\includegraphics[scale=0.75]{imagen_Seguimiento/areamu7.png}}
+                       \caption{Casilla del área isoparalitoral}
+                        \end{center}
+                       \end{figure}
+
+\newpage
+
+\item [] Ubicación del área en la casilla denominada área, el presente ejemplo, pertenece a los formatos actuales.
+\begin{figure}[!h]
+ \begin{center}
+ 
+\fbox{\includegraphics[scale=0.5]{imagen_Seguimiento/area1.png}}
+                       \caption{Casilla del área isoparalitoral.}
+                        \end{center}
+                       \end{figure}
+
+
+\item \textbf{CASO 10:} Observasiones 
+\item [] Es importante fijarse en detalles como las observaciones, podrían indicarnos el motivo, por el que no fue colectada un muestra, o también indicar el material colectado, veáse en el ejemplo.
+
+
+\begin{figure}[!h]
+ \begin{center}
+ 
+\fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/colec.png}}                        %\caption{Casilla del área isoparalitoral.}
+                        \end{center}
+                       \end{figure}
+
+\item[] La casilla de observaciones, se refiere a dos tipos de asteriscos, los azules y los rojos, los azules indican la colecta de estómagos y los rojos indican la definición del estadío de madurez sexual.
+
+
+\begin{figure}[!h]
+ \begin{center}
+ 
+\fbox{\includegraphics[scale=0.45]{imagen_Seguimiento/asterisco.png}}                        %\caption{Casilla del área isoparalitoral.}
+                        \end{center}
+                       \end{figure}
+
+\item [] Si observamos la casilla de madurez, la quinta y secta casilla indican la definición del estadío sexual de madurez a 3.
+
+
+
+\begin{figure}[!h]
+ \begin{center}
+ 
+\fbox{\includegraphics[scale=0.4]{imagen_Seguimiento/azul.png}}                        %\caption{Casilla del área isoparalitoral.}
+                        \end{center}
+                       \end{figure}
+
+\item [] Mientras si observamos la casilla n° 52 y 53, indican la colecta de estómagos. Considerando el caso por ello es muy importante leer y tomar en cuenta la casilla de observaciones e transcribir dicha casilla a su correspondiente lugar en el sistema Imarsis.
+
+\begin{figure}[!h]
+ \begin{center}
+ 
+\fbox{\includegraphics[scale=0.9]{imagen_Seguimiento/12345.png}}                        %\caption{Casilla del área isoparalitoral.}
+                        \end{center}
+                       \end{figure}
+
+
+
+\item \textbf{CASO 11:} Arte - Tipo de pesquería.
+
+\item [] Es posible que en algunas fichas no se muestre el tipo de pesquería por lo que en su mayoría como es el caso de esta ficha, solo coloquen el tamaño de la malla, pues en parte si es posible definir el tipo de pesquería a través del arte de pesca empleado.
+En la fotografía adjunta es el caso del arte pinta, cuyo número de hilo es de calibre 7 y 8, por lo que analizado es un arte artesanal o llamados como artes de en línea en mano y que sólo podría estar destinado a Consumo Humano Directo - \textbf{C.H.D.} 
+
+ \begin{figure}[!h]
+  \begin{center}
+  
+ \fbox{\includegraphics[scale=0.7]{imagen_Seguimiento/pinta.png}}                        %\caption{Casilla del área isoparalitoral.}
+                         \end{center}
+                        \end{figure}
+ 
+
+
+
+
+
+
+
+
+
+ 
+\section{ Validación de datos:}
+ 
+\begin{itemize}
+
+ \item Como todo procedimiento de validación de datos, se requiere la validación de datos,en lo que es necesario, que un usuario diferente revise de manera detallada y aleatoria las fichas digitadas, enfocándose en los datos: como fecha, especie de muestreo, serie, longitudes, pesos, tipo de pesquería y así como las descripciones cualitativas si las hubiera.
+ \item En el caso de que se haya hecho las revisiones correctamente, no olvidar hacer un click en la casilla REVISADO, para que la ficha se marque correctamente como ficha revisada.
+ 
+ \begin{figure}[!h]
+  \begin{center}
+  
+ \fbox{\includegraphics[scale=0.7]{imagen_Seguimiento/revisado.png}}                        %\caption{Casilla del área isoparalitoral.}
+                         \end{center}
+                        \end{figure}
+ 
+ 
+ 
+ \end{itemize}
+
+ \end{itemize}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %	SECTOR BIOMÉTRICO % % % % % % % % % % % %
+ 
+ 
+ 
+ 
+ 
+ 
+ \chapter {Ficha de muestreo Biométrico} 
+ \section{¿Cómo ingresar una ficha de muestreo biométrico?}
+
+\begin{itemize}
+\item Hacer click en el ícono IMARSIS.
+ \item Ingresar el usuario y contraseña como lo indica la sección: \textbf{3.1} 
+ \item Posteriormente visualizados los módulos seleccionar la \textbf{OPCIÓN}: Proceso
+ \item {Finalmente hacer click en el proceso:}
+\end{itemize}
+ 
+  \begin{center}
+ \fbox{\textbf{PELÁGICO- BIOMÉTRICO}}
+ \end{center}
+
+ 
+ \begin{figure}[!h]
+             \begin{center}
+            \fbox{\includegraphics[scale= 0.8]{imagen_Seguimiento/biom.png}}
+             \caption{Ingreso al módulo: Pelágico - Biométrico.}
+             \end{center}
+              \end{figure}
+
+\begin{itemize}
+
+
+\item La cantidad de datos a ingresar proveniente de una ficha biométrica puede variar desde casos como realizar una revisión de las casillas digitadas, ingreso y búsqueda de la fábrica, y por último la digitación completa de una ficha biométrica.
+ 
+ \end{itemize}
+ 
+ 
+ 
+ \newpage
+ 
+  
+  \section{Partes de una ficha de muestreo biométrico:}
+ 
+  \begin{figure} [!hp]
+    \begin{center}
+    \includegraphics[scale=1]{imagen_Seguimiento/6.jpg}
+     \caption{Partes de una ficha biométrica.}
+    \end{center}
+     \end{figure}
+ 
+  \newpage
+  \begin{center}
+\section {Partes de una ficha biométrica en el IMARSIS }
+   \end{center}
+ 
+ \begin{figure} [!hp]
+ \begin{center}
+ \includegraphics[scale=0.56]{imagen_Seguimiento/7.jpg}
+ \caption{Partes de una ficha biométrica en el IMARSIS}
+ \end{center}
+ \end{figure}
+ 
+ 
+ 
+ \begin{enumerate}
+ 
+\item \textbf{Nombre de la lancha (Descripción de la embarcación):} Para añadir el nombre de la lancha se realiza una rápida búsqueda ingresando las primeras letras del nombre o si fuera el caso de no ser legible la letra en la ficha, iniciar la búsqueda de la lancha a través del número de matrícula, que figura en la siguiente casilla, esta información suele figurar en algunas fichas.
+\textbf{\item Descripción de la fábrica:} El nombre de la fábrica no es un dato que figura siempre en fichas, esta información suele figurar en ocasiones, situado en el extremo superior.
+ \textbf{\item N° de viaje:} Esta casilla se llena automáticamente con el N°1, al ingresar los datos de  la embarcación y fábrica.
+ \textbf{\item Tipo de pesquería:} Solo queda definido entre 2 categorías.
+ 
+ \begin{enumerate}
+\item \textbf{Consumo Humano Directo (CHD):}Esta opción es seleccionada en relación con la capacidad de bodega y esta es reflejada a través de la \textbf{CAPTURA OFICIAL}, cuando la captura oficial es menor a 10 toneladas corresponde a \textbf{CHD}.
+ \item \textbf{Consumo Humano Indirecto(CHI):} Esta opción es seleccionada en relación con la capacidad de bodega y esta es reflejada a través de la \textbf{CAPTURA OFICIAL}, cuando la captura oficial esta entre  10 32.5 toneladas o es mayor a 32.5 toneladas esta corresponde a un tipo de pesquería de \textbf{CHI}.
+ \end{enumerate}
+ 
+ 
+ \textbf{\item Captura total = Captura oficial:} En esta casilla se ingresa el peso total de la captura en unidades (kg).
+\textbf{ \item Muestreador:} La base del IMARSIS cuenta con un listado de muestreadores ingresados hasta la fecha en caso de figurar colocarlo y si no lo indica en ficha colocar el \textbf{N°4 = Invitado}.
+ 
+ \begin{figure} [!h]
+ \begin{center}
+ \includegraphics[scale=0.6]{imagen_Seguimiento/8.jpg}
+ \caption{Ingreso del muestreador.}
+ \end{center}
+ \end{figure}
+\textbf{ \item Arte:} Se muestra en el IMARSIS, la siguiente clasificación:
+ 
+ %\footnote{Según el decreto supremo N° 005-2012 - PRODUCE, añade una nueva definición aplicable para el año 2012 hasta la fecha.}
+ \begin{table} [!h]
+   \centering
+   \begin{tabular}{p{1.5cm} p{4cm} p{6.5cm} p{1cm} }
+   \hline
+   CODIGO & NOMBRE DEL ARTE & RANGOS DE CAPACIDAD & TIPO \\
+   \hline \hline
+   301 & Boliche artesanal & Captura total menor a 10 toneladas. &  CHD \\
+   303 & Boliche industrial &  Captura total mayor a 32.5 toneladas. &  CHI \\
+   304 & Boliche menor escala &  Captura total entre 10 - 32.5 &  CHI \\
+   \hline
+   \end{tabular}
+   \caption{Artes de pesca según la capacidad de bodega.}
+   \label{tabla:autores}
+   \end{table}
+
+\textbf{ \item Área:} Las áreas de pesca se delimitan por líneas paralelas a la costa de 10 en 10 millas y se dividen cada 30 millas o medio grado de latitud sur, por lo tanto las áreas de pesca o también las áreas isoparalitorales estan representadas por un código de 4 dígitos y para lograr ser insertada en el IMARSIS, es necesario anteceder el número $ \textbf{0} $, por ejemplo $:$
+
+\item [] La ficha muestra el área de la siguiente manera = \textbf{1053}
+
+\item [] Solo puede ser ingresado antecediendo el $ 0$ =\textbf{ 01053}
+
+    \begin{figure}[!h]
+      \begin{center}
+      \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/9.jpg}}
+      \caption{Ingreso del área.}
+      \end{center}
+     \end{figure}
+   
+ \newpage   
+ \item [] Interpretación del código de área isoparalitoral:   
+\begin{center}
+
+ \huge\textbf{1053}
+ 
+\end{center}
+\item [] \textbf{Donde:} 
+\item []\textbf{1}: Indica la lejanía de la costa en este caso 10 millas.
+\item [] \textbf{05}: Indica el grado de latitud, en este caso sería los 05°S
+\item [] \textbf{3}: Indice el grado medio superior.
+  
+\textbf{\item{Coordenadas:}}
+Son un sistema de referencia que utiliza las dos coordenadas angulares, latitud (Norte y Sur) y longitud (Este y Oeste) y sirve para determinar la ubicación de la operación.
+Es frecuente encontrar las coordenas, listas para ser añadidas al sistema. Por ejemplo:
+\begin{center}
+\fbox{\Large 79° 31.98}
+\end{center}
+Sin embargo hay ocasiones en las que las coordeenadas se muestran en ficha de la siguiente forma: 
+\begin{center}
+\fbox{\Large 79.533°}
+\end{center}
+En aquellos casos es necesario realizar la converción a grados, minutos y segundos, de la siguiente forma.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.6]{imagen_Seguimiento/conversion.jpg}
+\caption{Conversión de coordenadas.}
+\end{center}
+\end{figure}
+
+
+
+
+\textbf{\item{Especie:}} La composición de la captura oficial se detalla en el cuadro denominado \textbf{ESPECIE}, cuya composición es por lo general ingresada con el nombre vulgar o común. Para facilitar el ingreso correcto de las especies se adjunta la tabla de con sus respectivos códigos y nombres científicos a partir del  nombre común.
+
+
+  
+\textbf{\item Peso de la muestra (Gramos):} Esta sección permite añadir la composición de la captura de especies, acompañado del peso de grupo. 
+\textbf{\item Peso del balde:} Para obtener la información del peso de grupo, esta se realiza con el pesaje en baldes, para la cual el peso del balde con el cual fue pesada la captura es necesario que esta se logre restar, con el fin de obtener el valor real del peso de grupo.  
+\textbf{\item Peso del  grupo:} Antes de que los peces caigan en la bodega, finalizado el proceso de secado,se toma una submuestra que está condicionado a la longitud y volúmen de la especie.
+
+ \begin{table} [!h]
+   \centering
+   \begin{tabular}{p{1.5cm} p{4cm}} 
+   \hline
+  ESPECIE &     COLECTOR \\
+   \hline \hline
+   Anchoveta & 1 balde de 10 kg \\
+   Sardina & 4-5 baldes de 10 kg \\
+   Jurel  & 4-5 baldes de 10 kg  \\
+   Caballa & 4-5 baldes de 10 kg  \\
+  \hline
+   \end{tabular}
+   \caption{Obtención de la muestra para el peso de grupo.}
+   \label{tabla:autores}
+   \end{table}
+   
+\textbf{\item Separación por especies:} De la muestra de grupo obtenida, por ejemplo si la muestra hubiera pesado 56 kg, se procede a separar por grupos dependiendo del tipo de especie y se realiza un registro por separado, son datos de vital importancia por que nos ayuda a conocer la composición de especies de la captura. 
+
+ \begin{figure}[!h]
+      \begin{center}
+      \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/composicion.jpg}}
+      \caption{Casilla de composición de especies en el IMARSIS.}
+      \end{center}
+     \end{figure}
+\newpage 
+
+\textbf{\item Peso medido:} Posterior al pesaje por grupo, se procede a la separación y al registro de longitudes por especie.
+
+ \begin{figure}[!h]
+  \begin{center}
+  \fbox{\includegraphics[scale=0.7]{imagen_Seguimiento/pesodegrupo.png}}
+  \caption{Casilla de peso de grupo y medido en el IMARSIS.}
+       \end{center}
+      \end{figure}
+      
+\textbf{\item Mediciones:} 
+ En el sector de mediciones de la ficha entregada al digitador, se muestran las siguiente casilla denominadas: 
+ 
+\begin{enumerate}
+\item \textbf{103}: Es el código de la especie, en este caso perteneciente a la especie anchoveta.
+\item\textbf{A}: Hace referencia al tipo de medición.
+
+\item [] \textbf{A}= Longitud total
+\item [] \textbf{B}= Longitud hasta la horquilla
+\end{enumerate}
+ \end{enumerate}
+ 
+  \begin{figure}[!h]
+        \begin{center}
+        \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/iniciales.png}}
+        \caption{Casilla de composición de especies.}
+        \end{center}
+       \end{figure}
+       
+\newpage
+       
+ 
+ 
+ \begin{landscape}
+ \begin{figure}[!h]
+ \begin{center}
+ \fbox{\includegraphics[scale=1]{imagen_Seguimiento/10.png}}
+ \caption{Casillas de llenado en fichas biométricas e IMARSIS.}
+ \end{center}
+ \end{figure}
+ \end{landscape}
+
+
+\section {Comandos utilizados para la introducción de datos.}
+
+\begin{itemize}
+\item Al añadir los datos en el IMARSIS, la plantilla de muestreo biométrico, requiere la utilización de algunos comandos y teclas.
+\item Siendo uno de los más empleados el [control + insert], para la introducción y registro biométrico de especies.
+\end{itemize}
+
+
+
+\begin{figure}[!h]
+ \begin{center}
+ \includegraphics[scale=0.78]{imagen_Seguimiento/comandos.jpg}
+ \caption{Casillas de llenado de fichas biométricas.}
+ \end{center}
+ \end{figure}
+
+
+
+\section {Ingreso de una ficha biométrica}
+  
+\begin{itemize} 
+\item Para añadir una nueva ficha biométrica, primero deberá añadirse la fecha y lugar de desembarque en la casilla superior
+\item Una vez insertado los datos de fecha y lugar de desembarque, hay dos formas de insertar una hoja nueva.
+\end{itemize}
+
+
+\subsection{Primera forma} 
+
+\begin{itemize}
+\item Haciendo clic en el extremo superior, en el ícono donde figura una hoja azul, que se denomina \textbf{NUEVO REGISTRO} 
+\end{itemize}
+
+
+
+\begin{figure} [!h]
+  \begin{center}
+  \fbox{\includegraphics[scale=0.5]{imagen_Seguimiento/5.jpg}}
+   \caption{Nueva ficha biométrica}
+  \end{center}
+   \end{figure}
+
+\subsection{Segunda forma}
+\begin{itemize}
+\item La otra forma, más práctica y rápida es presionando el comando \textbf{[Control +N]}, casilla denominada como: \textbf{NUEVO REGISTRO}.
+  \begin{figure} [!h]
+  \begin{center}
+  \fbox{\includegraphics[scale=0.4]{imagen_Seguimiento/4.jpg}}
+   \caption{Generando una nueva ficha biométrica}
+  \end{center}
+   \end{figure}
+
+\item Posteriormente la hoja esta lista para que se inserte la información visualizada en ficha. 
+
+\end{itemize}
+
+\newpage 
+
+\section {Ingreso y búsqueda de la fábrica }
+
+\begin{itemize}
+\item Una de las tareas más comunes en que se realizan en fichas biométricas es la búsqueda de la fábrica que en su mayoría no figura en la propia ficha.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.9]{imagen_Seguimiento/sinfabrica.jpg}
+\caption{Diseño de ficha sin fábrica}
+\end{center}
+\end{figure} 
+
+\item Hay fichas que contienen el nombre del fábrica ya incorporado en la ficha, este puede estar en el extremo superior o en observaciones, y por lo general se encuentran abreviadas. (Anexo 1. Fábricas abreviadas). Por ejemplo. \\
+
+\fbox {\textbf{HA} $ \rightarrow $ Harinas especiales.}\\\\
+\fbox {\textbf{CC} $ \rightarrow $ Capricornio.}\\
+
+
+  \newpage
+ \item Todos lo digitadores, tendrán en sus ordenadores una base completa en Excel, que contendrá los esfuerzos desde el año 2000 hasta el año 2013, esta base le permitirá al usuario realizar la búsqueda de las respectivas fábricas que no están añadidas en las fichas, como a la vez completar e insertar dicha información en el IMARSIS.
+ A la vez todos los usuarios tendrán a través de su cuenta de Dropbox, la carpeta \textbf{ESFUERZO - DIGITACIÓN }, que será compartida con todos los usuarios y permitirá accederse a ella desde cualquier ordenador.\\
+ 
+ Ir a Bibliotecas $ \rightarrow $  Documentos  $ \rightarrow $ Carpeta:  \textbf{DIGITACIÓN-ESFUERZO} \\
+ 
+ 
+ \begin{figure}[!hp]
+ \begin{center}
+ \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/11.jpg}}
+ \caption{Ubicación de la carpeta.}
+ \end{center}
+ \end{figure}
+
+ 
+
+ La carpeta \textbf{DIGITACIÓN-ESFUERZO} contiene los años del 2000 -2013, cada Excel contiene 12 libros, que llevan la designación al nombre de cada mes.\\
+ \end{itemize}
+ 
+ 
+\begin{figure}[!hp]
+ \begin{center}
+\fbox{\includegraphics[scale=0.7]{imagen_Seguimiento/12.jpg}}
+ \caption{Listado de desembarques 2000-2012 }
+ \end{center}
+ \end{figure}
+
+\newpage
+
+\subsection {Búsqueda de la fábrica:}
+\begin{itemize}
+ \item Una vez abierta la carpeta \textbf{DIGITACIÓN - ESFUERZOS}, es necesario considerar la fecha para la búsqueda de la fábrica.
+
+
+ \begin{figure}[!h]
+  \begin{center}
+ \includegraphics[scale=0.72]{imagen_Seguimiento/14.jpg}
+  \caption{Búsqueda a partir de la fecha.}
+  \end{center}
+  \end{figure}
+ 
+\item Tomar como primer dato al año que facilitará la búsqueda.
+\item Seleccionar el archivo con el año que figura en ficha. Ejemplo: \textbf{2003 }
+ 
+  \begin{figure}[!h]
+   \begin{center}
+  \fbox{\includegraphics[scale=0.5]{imagen_Seguimiento/12.jpg}}
+   \caption{Listado de años}
+   \end{center}
+   \end{figure}
+  \item Una vez ingresado al archivo en Excel: \textbf{2003.}
+ \item Posteriormente figurarán los datos de desembarques por fecha y puerto cada una de estas contendrán la información resumida acerca de la pesca artesanal (ART), industrial (IND) y madera (IND MAD).
+ 
+ 
+ \begin{figure}[!h]
+    \begin{center}
+   \fbox{\includegraphics[scale=0.4]{imagen_Seguimiento/13.jpg}}
+    \caption{Búsqueda a través de la fecha.}
+    \end{center}
+    \end{figure}
+ 
+ \item Para facilitar la búsqueda, se debe tomar en consideración la información de las siguientes casillas que figuran en la ficha. Por ejemplo: Nombre de la lancha, desembarque y captura.
+ 
+  
+ 
+ 
+ \begin{figure}[!h]
+    \begin{center}
+    \fbox{\includegraphics[scale=0.8]{imagen_Seguimiento/busqueda.jpg}}
+     \caption{Búsqueda inicial en el IMARSIS}
+     \end{center}
+     \end{figure}
+ 
+ \begin{enumerate}
+ 
+ \item \textbf{Fecha:} 2003-10-31  
+  \item \textbf{Nombre de la lancha:} Marysol\\
+  Puede presentarse el caso de que figuren más de 1 lancha denominada Marysol, en ese caso para tener la total certeza y la verificación es necesario que coincidan la captura oficial de la ficha con la captura que figura en la base de excel.
+  \item \textbf{Desembarque:} Puerto: Parachique.
+  
+ \end{enumerate}
+ 
+ \end{itemize}
+   
+ 
+ \begin{figure}[!h]
+     \begin{center}
+     \fbox{\includegraphics[scale=0.5]{imagen_Seguimiento/capturacoincidir.jpg}}
+      \caption{Búsqueda de la captura oficial en Excel.}
+      \end{center}
+      \end{figure}
+ 
+\section{Revisión de fichas}
+\begin{itemize}
+ \item Para la revisión de fichas, solo se requiere tomar en consideración, la verificación de los datos ya ingresados con especial énfasis a las siguientes secciones.
+ 
+ \begin{enumerate}
+ \item \textbf{Fábrica}: La selección correcta de la fábrica  que logre coincidir con la captura total.
+ \item \textbf{Tipo de pesquería:} Se verifica que la clasificación de artes de pesca este conforme a los rangos de la capacidad de bodega.
+ \item \textbf{Área:} Verificar el correcto ingreso de las coordenadas y el área. 
+ \item \textbf{Especie:} El correcto ingreso del código de especie.
+ \item \textbf{Pesos de especie:} El valor de A y B 
+ \item \textbf{Longitudes (cm)}: Verificar el correcto rango y peso correspondiente para cada talla.
+ 
+ \end{enumerate}
+ \end{itemize}
+  
+\newpage
+
+
+
+\chapter {Casos frecuentes en fichas biométricas}
+
+ \section{Modificación de fecha y lugar}
+ \begin{itemize}
+\item[]{ \textbf{Caso 1:}} \fbox {Me equivoqué en colocar la fecha y necesito modificarlo.}
+\item[] {\textbf{Caso 2:}} \fbox {Me equivoqué en colocar el lugar y necesito modificarlo.}
+ \end{itemize}
+
+
+\subsection * {Solución:}
+
+\begin{figure}[!h]
+      \begin{center}
+      \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/modificacionfecha.jpg}}
+        \caption {Modificar fecha.}
+        \end{center}
+        \end{figure}
+
+\begin{itemize}
+ \item Hacer click en \fbox{Modifica Fecha/lugar}
+  \item Luego aparecerá la siguiente casilla que permitirá realizar las modificaciones.
+ 
+ \item El sector actual contiene los datos que se desean modificar,la cual estarán paralelo a las nuevas casillas, sector donde se insertarán los cambios.
+ 
+\begin{figure}[!h]
+\begin{center}
+\fbox{\includegraphics[scale=0.4]{imagen_Seguimiento/casilla.jpg}}
+\caption{Casilla de modificación}
+\end{center}
+\end{figure}
+
+ 
+\item Finalmente se coloca aceptar en la casilla y se guardarán automáticamente los cambios de la ficha biométrica en el IMARSIS, mostrando los últimos cambios realizados.
+ 
+
+ \newpage
+ 
+\section{Sin registro biométrico de captura.}
+
+\begin{itemize}
+\item  La ficha biométrica de la cual soy responsable de revisar e ingresar al IMARSIS, no muestra rangos de tallas ni pesos que figuren en el sector: \textbf{LONGITUDES}.
+
+ 
+ \subsection * {Solución:}
+
+\item  Este caso hace referencia a aquellas fichas que no muestran información acerca del registro biométrico de captura, por ello cualquier ficha que muestre el caso, deberá ser ingresada por \textbf{DESEMBARQUE}, siempre en ella figure la siguiente información:
+
+
+\begin{enumerate}
+\item FECHA 
+\item LUGAR DE DESEMBARQUE
+\item FABRICA
+\item CAPTURA OFICIAL 
+ 
+\end{enumerate}
+  
+\item Si la ficha muestra los siguientes datos es necesario que sea ingresada a través de opción \textbf{PROCESO, PELÁGICO - DESEMBARQUE.}
+ 
+ \begin{figure}[!h]
+ \begin{center}
+ \fbox{\includegraphics[scale=0.7]{imagen_Seguimiento/desembarque.jpg}}
+ \caption{Ingreso de información por desembarque.}
+ \end{center}
+  \end{figure}
+ 
+  \begin{figure}[!hp]
+  \begin{center}
+  \fbox{\includegraphics[scale=0.8]{imagen_Seguimiento/fichavacia.jpg}}
+  \caption{Diseño de ficha que debe ser ingresada por desembarque.}
+  \end{center}
+  \end{figure}
+   
+   \item La opción \textbf{DESEMBARQUE - PELÁGICOS}, permite el ingreso de información a aquellas fichas que no muestren el peso de grupo o peso medido, en especial las que carecen de un registro de captura, frecuencias, longitudes y pesos.
+   
+ \end{itemize}
+ 
+   
+ \begin{figure}[!hp]
+   \begin{center}
+   \fbox{\includegraphics[scale=0.5]{imagen_Seguimiento/desembarquellenado.jpg}}
+   \caption{Ingreso al módulo de desembarque.}
+   \end{center}
+    \end{figure}
+    
+ \newpage
+  
+ \begin{figure}[!h] 
+    \begin{center}
+    \fbox{\includegraphics[scale=0.52]{imagen_Seguimiento/llenadodesembarque.jpg}}
+    \caption{Casillas de llenado por desembarque.} 
+    \end{center}
+     \end{figure}
+ 
+ \begin{itemize}
+ 
+ \item Luego de ingresar los datos superiores en la columna derecha, se puede generar un nuevo registro, haciendo click en el ícono azul o presionando el comando [Control +N], posteriormente se activará la casilla de \textbf{DESEMBARQUES}, que permitirá añadir información.
+ 
+  
+ 
+  \begin{figure}[!h]
+     \begin{center}
+     \fbox{\includegraphics[scale=0.5]{imagen_Seguimiento/nuevodesembarque.jpg}}
+     \caption{Creando un nuevo registro.}
+     \end{center}
+      \end{figure}
+ 
+\item La información que solicita \textbf{DESEMBARQUE} es la siguiente:
+
+
+
+\begin{enumerate}
+ \item \textbf{Fecha de desembarque:} Día - mes - año. \
+ \item \textbf{Lugar de desembarque:} También llamado como puerto.
+ \item \textbf{Fábrica:} Necesaria para el registro y la creación de la nueva hoja.
+\item \textbf{Nombre de la lancha} =  Denominado en desembarques como \textbf{Embarcación.} \\
+
+
+
+
+ \item \textbf{TIPO DE PESQUERÍA:}
+ \begin{enumerate}
+ 
+ \item \textbf{Consumo Humano Directo (CHD)} : Esta opción es seleccionada en relación con la capacidad de bodega y esta es reflejada a través de la CAPTURA OFICIAL, cuando la captura oficial es menor a 10 toneladas corresponde a CHD.
+ \item \textbf{Consumo Humano Indirecto (CHI)}: Esta opción es seleccionada en relación con la capacidad de bodega y está reflejada a través de la CAPTURA OFICIAL, cuando la captura oficial esta entre  10 32.5 toneladas o es mayor a 32.5 toneladas esta corresponde a un tipo de pesquería de CHI.
+ 
+ \end{enumerate}
+ 
+  \item \textbf{Área de pesca:} Consiste en 4 dígitos, siempre anteponiendo el número 0. 
+ \item \textbf{Observador:} Si lo indica la ficha, de no indicarlo se queda como NO DEFINIDO.
+ \item \textbf{Desembarque:} Este dato se encuentra en las fichas biométricas como CAPTURA OFICIAL (kg).
+ \item \textbf{Código:} Código de especie.
+ \item \textbf{Desemb. (t)} = Desembarque = Es la misma información que figura en la parte superior. 
+ \end{enumerate}
+ \end{itemize}
+ 
+ 
+ \newpage
+ 
+ \begin{landscape} 
+  \begin{figure}[!h]
+      \begin{center}
+     \includegraphics[scale= 0.9]{imagen_Seguimiento/juntasdesembarque.jpg}
+      \caption{Casillas de ficha biométrica ingresados al IMARSIS.}
+      \end{center}
+       \end{figure}
+ \end{landscape}
+ 
+ \newpage
+   
+
+\section{Sin datos de peso medido}
+ 
+ \begin{itemize}
+
+
+ \item La ficha de la cual soy responsable de digitar no figura el peso medido y sólo me muestra el peso de grupo, la cual el sistema no me permite guardar los cambios, solicitándome los valores histórico, que valores coloco sin no tengo los valores medidos.
+ 
+ \item [] \textbf{SOLUCIÓN }
+ \item En el caso de no tener los valores de A y B, siendo estos lo que figuran en la parte inicial en la cinta del bloque de fichas, se recomienda utilizar los valores históricos, que van a diferir según la especie, año y región de desembarque.
+  \end{itemize}
+
+  \begin{figure}[!h]
+       \begin{center}
+       \fbox{\includegraphics[scale=0.57]{imagen_Seguimiento/sinvalores.jpg}}
+       \caption{Casillas sin información de los valores de A y B}
+       \end{center}
+        \end{figure}
+ 
+ 
+
+ \newpage 
+ \section{Registro de un segundo viaje.}
+ 
+ \begin{itemize}
+
+
+ \item Tengo dos fichas biométricas de la misma embarcación, con la misma fecha de salida, sin embargo al ingresar los datos en el IMARSIS, el sistema me consulta si deseo registrar un nuevo viaje. ¿Acepto la opción?.
+  
+ 
+  
+  \begin{figure}[!h]
+            \begin{center}
+           \fbox{\includegraphics[scale= 0.4]{imagen_Seguimiento/viaje2.jpg}}
+            \caption{Registro de un nuevo viaje.}
+            \end{center}
+             \end{figure}
+  
+  
+  
+  
+  \section * {Solución:}
+ \item Si, se recomienda aceptar a la casilla de consulta, ya que si es posible que se presente el caso en la que una embarcación realice dos viajes en el mismo día, las coordenadas pueden variar o ser las mismas, pero si varía la captura oficial, el peso de grupo y peso medido, asi como las tallas y frecuencias de las especies, es correcto el registro de un segundo viaje. 
+ 
+  
+   \end{itemize}
+  
+  \begin{figure}[!h]
+          \begin{center}
+         \fbox{\includegraphics[scale= 0.9]{imagen_Seguimiento/nuevoviaje.jpg}}
+          \caption{Registro de un nuevo viaje.}
+          \end{center}
+           \end{figure}
+    
+ 
+ \begin{itemize}
+ \item Las fichas que necesitan ser ingresadas y registradas como un segundo viaje, son aquellas que tienen el mismo nombre de la embarcación y la misma fecha, como se muestra en el esquema, resaltado con casillas rojas. En términos de pesquería, la pesca de una embarcación con dos viajes en el mismo día se encuentra totalmente prohibida, pero sin embargo algunas embarcaciones hasta aproximadamente el año
+  
+ 
+ 
+ \begin{figure}[!h]
+           \begin{center}
+          \includegraphics[scale= 0.8]{imagen_Seguimiento/desembarquepp.jpg}
+           \caption{Ingreso de una nuevo viaje.}
+           \end{center}
+            \end{figure}
+ 
+ \newpage 
+  Finalmente los registros, son ingresados al IMARSIS.
+ 
+ 
+  \begin{figure}[!h]
+            \begin{center}
+           \fbox{\includegraphics[scale= 0.8]{imagen_Seguimiento/9999.jpg}}
+            \caption{Ingreso del 1er y 2do viaje.}
+            \end{center}
+             \end{figure}
+
+  \newpage
+   \section {Composición de especies}
+   
+   \begin{itemize}
+   \item Las fichas de muestreo biométrico si bien muestran una diversidad de especies reportadas en la captura, en dicho caso las especies que figuran en el recuadro de composición solo figuran con el nombre vulgar, existiendo por ello muchas veces la duda de que especie seleccionar si con el nombre vulgar pueden figurar diferentes especies con sus respectivos nombres científicos, para ello se adjunta la tabla con el listado de especies que deberán ser seleccionadas siendo el caso.
+  
+   
+  \item [] \textbf{Solución}
+ 
+   \item Para facilitar la selección de especies a través del nombre vulgar, se adjunta un listado de especies, que comúnmente son encontrados durante la digitación.
+  \end{itemize}
+  
+  \begin{figure}[!h]
+              \begin{center}
+             \fbox{\includegraphics[scale= 0.6]{imagen_Seguimiento/especie12.png}}
+              \caption{Caso de una especie con nombre vulgar $"Pampanito"$ con varios nombres científicos.}
+              \end{center}
+               \end{figure}
+  
+  
+  \newpage
+  \section {Fichas biométricas sin área}
+  
+  \begin{itemize} 
+  
+  \item [] Las fichas biométricas cuentan con una casilla denominada \textbf{lugar de pesca y profundidad}, es necesario que dichas casillas sea encuentren llenadas con los 4 dígitos que corresponden a las áreas isoparalitorales, ¿Que hacer si mi fichas no tiene el código del área y si solo tengo el lugar de referencia?
+
+ 
+ \begin{figure}[!h]
+               \begin{center}
+              \fbox{\includegraphics[scale= 0.9]{imagen_Seguimiento/fichazona.png}}
+               \caption{Casilla sin área, sólo con zona referencial.}
+               \end{center}
+                \end{figure}
+   
+ 
+  \item [] \textbf{Solución: }
+  
+  \item [] Cuando una ficha no muestra la información del área, es posible que esta información se extienda a manera de texto en el cuadro inferior, en donde se describe la ubicación referencial, como por ejemplo:
+  
+  
+  \end{itemize}
+  
+   \begin{itemize}
+   \item A fuera de 
+     \item Frente a 
+     \item A 2 millas de
+     \item A 5 horas de 
+   
+  \item [] Estos enunciados acompañados de datos como las horas, millas y lugares, permitirán ubicarnos exactamente en la zona de pesca, para la cual las áreas referenciales deberán ser escritas en la casilla de observaciones, mientras tanto la casilla del área no deberá ser tocada, porque si se tocada dicha casilla, la ficha no podría almacenarse. 
+  
+  
+   \begin{figure}[!h]
+                 \begin{center}
+                \fbox{\includegraphics[scale= 0.9]{imagen_Seguimiento/observaciones.png}}
+                 \caption{Área referencial escrita en la casilla de observaciones.}
+                 \end{center}
+                  \end{figure}
+  
+  \item [] Se recomienda no tocar dicha casilla, en el caso de que la ficha no cuente con el código de área. 
+   \end{itemize}
+  
+   \end{itemize}
+   \begin{figure}[!h]
+                   \begin{center}
+                  \fbox{\includegraphics[scale= 0.9]{imagen_Seguimiento/notoca.jpg}}
+                   \caption{Área referencial escrita en la casilla de observaciones.}
+                   \end{center}
+                    \end{figure}
+    
+  
+\newpage
+
+\section{Sin lugar de desembarque}
+
+ \begin{itemize} 
+  \item  Todas las fichas biométricas cuentan con una franja que las contiene, dicha franja cuenta con la información acerca del lugar de desembarque, pero en muchos casos las estas se suelen extraviar por procesos de transporte o almacenamiento y consecuente a ello se pierde a la información del lugar de desembarque.
+  
+  \item [] \textbf{Solución} 
+  
+  \item  La información acerca del lugar de desembarque no solo está en la franja inicial sino también esta información se encuentra dentro de la ficha, con un código de dos cifras dependiendo del lugar de desembarque.
+   \end{itemize}
+ 
+    \begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale= 0.9]{imagen_Seguimiento/areass.jpg}}
+                    \caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+     
+ \begin{table} [!h]
+\centering
+ \begin{tabular}{p{1.5cm} p{5cm}} 
+ \hline \textbf{Código} &  \textbf{Puerto de desembarque} \\ 
+ \hline   71 &  Atico \\ 
+ \hline  59 & Tambo de Mora \\ 
+ \hline  49 & Chancay  \\ 
+ \hline  10 & Paita  \\ 
+ \hline 75 & Matarani Mollendo \\ 
+ \hline 23 & Chimbote \\ 
+ \hline 19 & Chicama \\ 
+ \hline  60 & Pisco \\ 
+ \hline  77 &  Ilo \\ 
+ \hline  50 & Callao \\ 
+ \hline  41 & Huacho \\ 
+ \hline 43 & Supe \\ 
+ \hline  78 & Vila Vila \\ 
+ \hline 45 & Vegueta \\ 
+ \hline 47 & Huacho  \\ 
+ \hline 
+ \end{tabular} 
+ \caption{Códigos de desembarque}
+    \label{tabla:autores}
+\end{table}
+
+
+
+\newpage
+
+\section {Fábricas encontradas abreviadas}
+
+\begin{itemize}
+
+\item Las fichas biométricas contienen la información de la fábrica en el extremo superior por lo que en la mayoría de los casos, es posible que se encuentren escritas completamente legibles, pero  existen algunos casos en los que solo se figura una abreviatura, como la letra: \textbf{A, S, K.}
+
+ \item [] \textbf{Solución} 
+
+\item Para facilitar los casos en los que nos se visualiza completamente el nombre de la fábrica se adjunta el listado de abreviaturas comúnmente econtradas.
+
+\end{itemize}
+
+
+ \begin{table} [!h]
+\centering
+ \begin{tabular}{p{7cm} p{6cm}} 
+ \hline \textbf{Empresa pesquera} &  \textbf{Abreviatura} \\ 
+ \hline   Tecnología de Alimentos S.A.C  & TASA  \\ 	
+ \hline  Chinese Fishing Group S.A.C & CFG \\ 
+ \hline  Tecnología de Alimentos  (Tasa Norte)& ARPES  \\  
+ \hline  Austral Group S.A.A & AUSTRAL \\  	
+ \hline Conservera Garrido S.A & 	GARRIDO \\  
+ \hline Corporación del Mar S.A & CORMAR \\      
+ \hline  Corporación Fish Protein S.A & CFP \\  	
+ \hline Ex Gildesmester & IMSSA \\  
+ \hline Pecodesa S.A.C & VLACAR \\ 	
+ \hline Conservera el Pilar & EL PILAR \\     	
+ \hline  Pesquera Jada S.A & JADA \\  	
+ \hline Corporación Pesquera 1313 &	Pesq. 1313 \\ 
+ \hline Pesquera Rubi	S.A & Rubi  \\   
+ \hline Tecnología de Alimentos (TASA ILO) & 	ARPES \\  
+ \hline  Empresa de los Productos del Mar & EPROMAR \\  	
+ \hline Pesquería Industrial El Angel & PIANGESA \\  	
+ \hline Pesca Perú S.A & PESCA PERU \\  
+ \hline Empresa de los Productos del Mar S.A.C & EPROMASA \\  	
+ \hline Centinela & CE\\ 	 	
+ \hline  Copeinca & CO \\ 
+ \hline Capricornio & CC \\ 	
+ \hline  Alexandra & ALE \\ 
+ \hline  Procesadora del Campo & PROC \\  	 	
+ \hline  Katamaran & KA \\  	
+ \hline  Exalmar & 	EX \\  	 	
+ \hline  Harinas Especiales & HA \\  	
+ \hline 
+ \end{tabular} 
+ \caption{Códigos de desembarque}
+    \label{tabla:autores}
+\end{table}
+
+
+\newpage
+
+
+\section{Tipo de pesquería}
+
+\begin{itemize}
+
+
+\item  El tipo de pesquería o flota se encuentra definido por la casilla denominada flota, por lo que se muestran dos opciones : Harina \textbf{1} y Consumo \textbf{2}.   
+
+
+
+
+
+    \begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale= 1.2]{imagen_Seguimiento/flota2.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+
+\newpage
+
+\item En el siguiente caso se muestra una ficha, en donde figuran dos tipos de flota tanto  1 y 2, si fuese el caso encontrado se deberá escoger ambas opciones es decir que corresponde a un CHI/CHD, esta opción se encuentra activa en el sistema. 
+
+
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.8]{imagen_Seguimiento/pesque.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+
+
+\item Siendo el caso mostrado, se deberá digitar en el sistema como tipo de pesquería: 1 y 2 es decir Consumo Humano Directo/ Consumo Humano Indirecto, ya que recordemos que si se marcada el 1= Harina, significa CHI y si estuviera marcado solo el 2 = Consumo, lo que quiere decir  que está orienta a CHD.
+
+
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=1.2]{imagen_Seguimiento/tip.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+
+\end{itemize}
+
+\section{Fichas biométricas sin captura oficial}
+
+\begin{itemize}
+
+
+
+\item En el presente caso se muestra una ficha que mantiene la información de composición y sus pesos de grupos respectivos, pero no muestra un dato muy importante para el registro y uso de información de la ficha, nos referimos a Captura Oficial.
+
+
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.9]{imagen_Seguimiento/sincap.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+\item Siendo este el caso presentado y no existiendo información de la captura oficial, solo hay una forma de coincidir y encontrar esta información, la solución implica buscar a partir del día y embarcación en el libro de \textbf{DESEMBARQUES}, correspondiente al año de la ficha.
+
+\end{itemize}
+
+\section{Captura oficial en la casilla de observaciones}
+
+\begin{itemize}
+
+
+
+\item En el siguiente caso se muestra una ficha biométrica sin la captura oficial en su correspondiente casilla, ya que la captura declarada = Captura oficial, esta se encuentra en la casilla de observaciones, junto con otras especies que también corresponden a la composición de la pesca.
+
+\end{itemize}
+
+
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/sincaptu.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+\item Finalmente considerar la captura oficial como lo indica en la casilla de observaciones que corresponde a\textbf{ 34 kgs.}
+
+
+
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.65]{imagen_Seguimiento/34k.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+\newpage
+
+\section{Especies en la casilla de observaciones}
+
+\item  Hay que tomar en cuenta que la casilla de observaciones suma un papel muy importante desde almacenar la captura oficial en algunos casos, como en el anterior y en otros expresan la composición de la captura.
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.8]{imagen_Seguimiento/obser.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+\item Si se encontrada el caso como la ficha mostrada no olvidar añadir las especies citadas en observaciones, dentro del casillero de composición de las especies, como se muestra ingresado en el sistema Imarsis.
+
+
+
+
+
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=1]{imagen_Seguimiento/compoju.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+
+\newpage
+
+\section{Casillero de especies vacío, pero con captura oficial}
+
+\begin{itemize}
+
+\item En este caso se puede observar que la ficha tiene una captura oficial (Kg) de 8 toneladas, pero no indica a que tipo especie se refiere, por lo que  para ello es necesario verl el reverso de la hoja. 
+
+\end{itemize}
+
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.45]{imagen_Seguimiento/ficha2324.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+\item Si bien la casilla de especies no nos permite visualizar de que especie se refiere la captura de 8 toneladas, pero si nos dirigimos al reverso de la hoja, en donde se encuentran los muestreos biométricos, se encuentra la especie Sardina, lo que dicho muestreo nos ayuda a definir que la captura señalada se refiere a la especie a la \textbf{sardina.}
+
+
+
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/sardina.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+
+\section{ Formato de muestreo biométrico del año 60-70}
+
+\begin{itemize}
+
+\item  En algunos casos se han visualizado fichas en formatos que difieren del diseño actual de muestreo, en el caso de que figuren este tipo de formato, considerar que se refiere a un formato de muestreo biológico.
+
+
+\end{itemize}
+
+\begin{figure}[!h]
+                    \begin{center}
+                   \fbox{\includegraphics[scale=0.6]{imagen_Seguimiento/forma60.png}}
+                    %\caption{Código del área de desembarque correspondiente al puerto de Pisco.}
+                    \end{center}
+                     \end{figure}
+
+
+
+
+
+
+
+\end{itemize}
+
+
+
+
+ %&\setcounter{tocdepth}{4} 
+
+
+%inserta todos los epígrafes hasta el nivel \paragraph en la tabla de contenidos
+%&\setcounter{tocdepth}{4} 
+%numera todos los epígrafes hasta nivel \subparagraph en el cuerpo del documento
+%\setcounter{secnumdepth}{5} 
+
+
+
+
+
+
+
+
+\mainmatter  
+
+
+
+
+\label{ch:capituloB} 
+% ... (contenido del capítulo B)
+
+\appendix % Apéndices 
+ \begin{landscape}
+
+\chapter{Listado de especies} 
+\label{ch:apendiceX} 
+
+\begin{longtable}{|c|c|c|c|c|} 
+\caption{Listado de especies}\\
+\hline\textbf{Nombre común}&\textbf{Código}& \textbf{Nombre científico }&\textbf{Distribución}&\textbf{Observaciones}\\ 
+\endfirsthead
+\multicolumn{5}{c}%
+{\tablename\ \thetable\ -- \textit{\textit{Listado de especies}}} \\
+\hline
+\textbf{Nombre común }& \textbf{Código} & \textbf{Nombre científico}& \textbf{Distribución}& \textbf{Observaciones}\\ 
+\hline
+\endhead
+\hline\multicolumn{5}{r}{\textit{Continúa la siguiente página}} \\
+\endfoot
+\hline
+\endlastfoot
+\hline Abraliopsis  & 2018 &  \emph {Abraliopsis sp} & Para todo el Perú. & \\ 
+\hline  Aguja & 101 & \emph{Strongylura exilis} & Para todo el Perú. & \\ 
+\hline Agujilla & 2041&\emph{Agujilla sp}& Para todo el Perú. & \\
+\hline Anchoveta & 103 &\emph{Engraulis ringens} & Para todo el Perú.& \\ 
+\hline Anguila & 1041 & \emph{Ophicthus remiger} & Para todo el Perú.& \\ 
+\hline Argonauta  & 348 & \emph{Argonauta sp} & Para todo el Perú. & \\ 
+\hline  Ayanque & 130 & \emph{Cynoscion analis} & Para todo el Perú. & Ayanque = cachema\\ 
+\hline Bagre & 111 & \emph{Galeichthys sp} & Para todo el Perú. &  \\ 
+\hline Bagre con faja & 419 & \emph{Galeichthys peruvianus} & Para todo el Perú. &  \\ 
+
+\hline Barbudo & 113 & \emph{Polydactylus approximans} & Para todo el Perú. &  \\ 
+	
+\hline  Barracuda & 213 & \emph{Galeichthys peruvianus} & Para todo el Perú. &  \\	
+\hline  Barrilete & 114 & \emph{Katsuwonus pelamis} & Para todo el Perú. &  \\
+\hline  Barrilete negro & 115 & \emph{Auxis rochei} & Para todo el Perú. &  \\
+\hline Bereche & 2034 & \emph{Larimus sp} & Para todo el Perú. &  \\ 										
+\hline Bereche con barbo & 286 & \emph{Ctenosciaena peruaviana} & Para todo el Perú. & \\ 		
+\hline Bereche chico & 438 & \emph{Ctenosciaena peruaviana} & Para todo el Perú. & \\ 			
+\hline Bereche grande & 122 & \emph{Larimus pacificus} & Para todo el Perú. &\\ 									
+\hline Bonito & 344 & \emph{Sarda chilensis chilensis}& Para todo el Perú. &  \\ 	
+\hline 	Brotula  & 344 & \emph{Cataetyx sp}& Para todo el Perú. &  \\ 	
+\hline Caballa & 125 & \emph{Scomber japonicus}& Para todo el Perú. & \\ 		
+\hline Caballito moro & 406 & \emph{Peristediom crustosum}& Para todo el Perú. & \\ 		
+\hline Cabrilla & 128 & \emph{Paralabrax humeralis} & Para todo el Perú. & Cabrilla = Perela \\ 	
+\hline Cachema & 130& \emph{Cynoscion analis}& Para todo el Perú. &  Cachema = Ayanque	 \\ 	
+\hline 	Calamar & 32 & \emph{Loligo gahi}& Para todo el Perú. & \\ 
+\hline 	Calamar 2 & 362  & Otros moluscos  & No figura nombre científico en la base. & \\								
+\hline 	Calamar globo & 1829 & Canchridae & Para todo el Perú. & 	 \\ 
+\hline 	Camarón rojo & 57 & \emph{Pleuroncodes monodon} & Para todo el Perú. & Camarón rojo = múnida \\ 
+\hline Cangrejo nadador	 & 79 &\emph{Euphylax dovii} & Para todo el Perú. & \\ 								
+\hline\multirow{2}{*} {Camotillo} & 132 &  \emph{Diplectum conceptiones} & Norte del Perú Latitud (2°-10). & \parbox[t]{10 cm}{Chimbote, Chicama, Cabo blanco, Talara, Paita,\\ Pacasmayo, Eten, Salaverry, Casma, Huarmey} \\
+\cline{2-5}
+& 308  & \emph{Normanichthys croockeri} & Sur del Perú  (10°-18°) & \parbox[t]{10 cm} {Pimentel, Punta Lobos, Callao, Pucusana, Pisco, Ilo,\\ San Martín, Cerro Azul, Supe, Huacho, Chancay.} \\	
+\hline Chauchilla & 122 & \emph{Sarda chiliensis chiliensis} & Para todo el Perú. & \\
+\hline Chilindrina & 1039 & \emph{Stromateus stellatus} & Para todo el Perú. & \\	
+\hline Chiri & 195 & \emph{Prepilus medius} & Para todo el Perú. & \\	
+\hline Chulita & 1056 & \emph{Xenichthys xanti} & Para todo el Perú. & \\	
+\hline Coco & 140 & \emph{Paralunchurus peruanos} & Para todo el Perú. & \\																			
+\hline Cojinova & 141 & \emph{Seriolella violacea} & Para todo el Perú. & \\			
+
+\hline Cometrapo & 2000 & \emph{Oligoplites spp} & Para todo el Perú. & \\										
+\hline Congrio & 143 & \emph{Genypterus maculatus } & Para todo el Perú. & \\												
+\hline Congrio rojo & 144 & \emph{Brotula clarkae} & Para todo el Perú. & \\
+\hline Congrio de aleta manchada & 1874 & \emph{Lepophidium negroppina} & Para todo el Perú. & \\
+\hline Cubiceps & 1992 & \emph{Cubiceps sp.} & Para todo el Perú. & \\				
+
+\hline\multirow{2}{*}{Diablico} & 408 &  \emph{Pontinus sierra} & Si lo indica la ficha. & \\
+\cline{2-5}
+& 156 & \emph{Pontinus furcirrhinus} & Para todo el Perú. & \\	
+
+
+
+\hline Doncella & 1020 & \emph{Hemanthias signifer} & Para todo el Perú. & \\
+\hline Errante & 328 & \emph{Psenes sio} & Para todo el Perú.&  Errante = Psenes \\
+\hline Espejo & 2025 & \emph{Selene sp} & Para todo el Perú.& \\				
+\hline Esquila I & 1889 & \emph{Pseudosquillopsis lessoni } & Para todo el Perú.& \\				
+\hline Esperlan plateado & 327 & \emph{Leuroglossus urotranus} & Para todo el Perú.& \\		
+\hline Euphylax & 79 & \emph{Euphylax dovii} & Para todo el Perú.& \\			
+\hline Euphasidos & 347 & \emph{Euphasia sp} & Para todo el Perú.& \\			
+\hline\multirow{2}{*} {Falso volador} & 161 & \emph{Prionotus sp} & Para todo el Perú &  \\
+\cline{2-5}
+& 388 & \emph{Prionotus stephanophrys} & Si lo indica la ficha &  \\	
+\hline Chilindrina & 1039 &\emph{Stromateus stellatus} &  Para todo el Perú & \\
+
+\hline Jaivo paco & 405& \emph{Mursia gaudichaudii} & Si lo indica la ficha.& \\	
+\hline Jurelillo& 168& \emph{Trachurus picturatus murphyi} & Para todo el Perú.& Jurelillo= Jurel juvenil \\	
+\hline Jurel & 168& \emph{Trachurus picturatus murphyi} & Para todo el Perú.& 	 \\
+\hline Jurel fino  & 284 & \emph{Decapterus macrosoma } & Para todo el Perú.&  \\
+\hline Langostino & 44 & \emph{Litopenaeus spp} & Para todo el Perú.&  \\
+\hline Langosta & 43 & \emph{Panulirus gracilis} & Para todo el Perú.&  \\
+\hline Lenguado 4 ocelos & 411& \emph{Hippoglossima tetropthalmus} & Para todo el Perú.&  \\
+\hline Lengüeta & 287 & \emph{Hippoglossima macrops} & Para todo el Perú.&  \\
+\hline Lepidopus & 227 & \emph{Lepiddopus sp} & Para todo el Perú.&  \\
+\hline Lisa & 173 & \emph{Mugil cephalus} & Para todo el Perú.&  \\															
+\hline Loliolopsis & 2045& \emph{Loliolopsis sp} & Para todo el Perú.& Calamar = Loliolopsis sp \\								\hline Machetillo & 175 & \emph{Ethmidium  maculatum} & Para todo el Perú. & Machetillo = Machete juvenil \\
+\hline Machete & 175 & \emph{Ethmidium maculatum} & Para todo el Perú.
+& \\	
+						
+\hline\multirow{2}{*}{Malagua} & 355 & \emph{Aequoria sp} & Si lo indica la ficha & \\
+\cline{2-5}
+& 1991 & Medusa (gelatinoso) & Para todo el Perú. & Malagua= Medusa. \\
+\hline Meduza & 1991 & Medusa (gelatinoso) & Para todo el Perú.& Malagua= Medusa \\
+\hline\multirow{2}{*}{Melva} & 2006 & ??? & Sin nombre científico en base & \\
+\cline{2-5}
+& 115 & \emph{Auxis rochei} & Para todo el Perú. & Si lo indica la ficha como Barrilete negro. \\	
+
+\hline Merluza & 180 & \emph{Merluccius gayi peruanus}  & Para todo el Perú.& 	 \\	
+\hline Merluza juvenil & 180 & \emph{Merluccius gayi peruanus}  & Para todo el Perú.& 	 \\	
+\hline Mictofidos & 359 & Familia. Myctophidae & Para todo el Perú.& 	 \\										
+\hline Myliobatidae & 1998 & Myliobatidae & Para todo el Perú.&  Myliobatidae= Raya águila \\																
+\hline Mismis & 2014 & ??? & Para todo el Perú.&  Sin nombre científico en base. \\				
+\hline Mojarra & 2008 & \emph{Eucinostomus sp} & Para todo el Perú.&  \\					
+\hline Mojarrilla & 2048 & \emph{Stellifer sp} & Para todo el Perú.&  \\
+\hline Munida & 57 & \emph{Pleuroncodes monodon} & Para todo el Perú.& Munida= camarón rojo \\	
+\hline Otras especies & 2028 & Diversas especies & En caso que no figure en lista. & \\	
+\hline Palometa & 1033 & \emph{Prepilus snyderi} & Para todo el Perú. & Palometa = Pampanito.	 \\												
+\hline Pampanito & 1050 &  \emph{Prepilus snyderi} & Para todo el Perú. & Pampanito =Palometa \\	
+\hline 	Pampano & 196 & \emph{Trachinotus paitensis} & Para todo el Perú. &  \\		
+\hline 	Pampano fino & 141 &  \emph{Trachinotus paitensis} & Para todo el Perú. &  \\	
+\hline 	Pardo & 199 &  \emph{Choloscombrus orqueta} & Para todo el Perú. &  \\	
+
+\hline 	Pejerrey & 204 & \emph{Odontesthes regia regia}  & Para todo el Perú. &  \\	
+\hline 	Perela & 129 & \emph{Paralabrax callaensis} & Para todo el Perú. &  Perela = cabrilla \\		
+\hline 	Pez cinta & 301 & \emph{Trichurus lepturus}  & Para todo el Perú. &  \\
+\hline 	Pez fraile & 266 & \emph{Aphos porosus} & Para todo el Perú. &   \\
+\hline 	Pez globo & 428 & \emph{Sphoeroides sechurae} & Para todo el Perú. &   \\		
+\hline 	Pez volador & 2047 &  & Para todo el Perú. &  Sin nombre científico en base.		 \\	
+\hline 	Pez zanahoria & 343 & emph{Antennarius avalonis} & Para todo el Perú. &   \\					
+\hline 	Pota & 47 & \emph{Dosidiscus gigas} & Para todo el Perú. &\\																																																		
+\hline 	Psenes & 328 & \emph{Psenes sio} & Para todo el Perú. &   \\
+\hline 	Raya & 1999 & ??? & Para todo el Perú. & Sin nombre científico en base.  \\	
+\hline 	Raya espinosa & 247 & \emph{Psamobatis caudispina} & Para todo el Perú. & Sin nombre científico en base.  \\	
+\hline 	Raya aguila & 1998 & Myliobatidae & Para todo el Perú. &   \\
+\hline 	Raya negra & 218 & \emph{Dasyatis sp, Myliobatis sp} & Para todo el Perú. &   \\
+\hline 	Roncador rayado & 297 & \emph{Pereques lanferi} & Para todo el Perú. &  \\
+\hline 	Salpas & 346 & ??? & Para todo el Perú. & Sin nombre científico en base. \\
+\hline 	Samasa & 228 & \emph{Anchoa nasus} & Para todo el Perú. & Sin nombre científico en base. \\
+\hline Sardina  & 231 & \emph{Sardinops sagax sagax} & Para todo el Perú. & \\
+\hline Sardina redonda & 303 & \emph{Etrumeus teres} & Para todo el Perú. & \\
+\hline Sardinilla & 231 & \emph{Sardinops sagax sagax} & Para todo el Perú. &  Sardinilla= Sardina\\
+\hline Sierra & 233 & \emph{Scomberomorus sierra} & Para todo el Perú. &  Sierra = Verle \\
+\hline Suco & 140 & \emph{Paralunchurus peruanos} & Para todo el Perú. &  \\
+\hline Sierra & 233 & \emph{Scomberomorus sierra} & Para todo el Perú. &  Sierra = Verle \\
+\hline Tiburon azul & 109 & \emph{Prionace glauca} & Para todo el Perú. &   \\
+\hline Tollo & 243 & \emph{Mustelus sp.,Triakis sp.} & Para todo el Perú. &   \\
+\hline Triphoturus & 322 & \emph{Triphoturus sp	} & Si lo indica la ficha. & \\
+
+\hline Verle & 233 & \emph{Scomberomorus sierra} & Para todo el Perú.&  Verle = Sierra	 \\
+
+\hline Vinciguerria & 320 & \emph{Vinciguerria lucetia} & Para todo el Perú.&   \\
+	
+
+
+\hline 
+%\end{tabular} 
+%\end{center}
+%\end{table}
+
+\end{longtable}
+
+
+
+\end{landscape}
+% ... (contenido del apéndice X)
+
+\chapter{Glosario} 
+\label{ch:apendiceY} 
+
+
+\begin{itemize}
+
+
+
+\item []  \textbf{A}
+\item [] \emph{Absorción:}	Proceso por el cual la energía radiante es absorvida y convertida  en otras formas de energía.
+
+\item []  \emph {Abundancia:}	En pesquería, número total (o peso) de los individuos de una población.
+
+\item [] \emph {Accesibilidad:}	Parte de un recurso que puede ser capturado.
+
+\item [] \emph {Aceite de Pescado:}	Subproducto de la elaboración de harina  de pescado en la industria de reducción.
+
+\item [ ]Mezcla de lípidos extraído de los tejidos de peces marinos y en el que por medios mecánicos se han eliminado casi en su totalidad el agua y las impurezas sólidas en suspención.
+
+\item [] \emph {Actividad Pesquera:}	Conjunto de acciones realizadas para el aprovechamiento económico de los recursos hidrobiológicos  sean en condiciones naturales o artificiales.
+
+\item [] \emph {Actividad Pesquera:}	Conjunto de acciones realizadas para el aprovechamiento económico de los recursos hidrobiológicos  sean en condiciones naturales o artificiales.
+Afloramiento:	Proceso por el cual el agua se levanta de la profundidad hacia la superficie.
+\item [] \emph {Al azar:}	Algo que no sucede sistemáticamente o secuencialmente y que es impredecible.
+
+\item [] \emph {Aleta Caudal:}	Aleta situada en el extremo  posterior del cuerpo y que forma la cola en la mayoría de los peces. Su función principal es la dar propulsión al cuerpo. 
+
+
+\item [] \emph {Alevín:}	Etapa en los peces desde la eclosión hasta despues de transcurridos los estados larvales y en el cual el individuo presenta características de adulto.
+
+ \item [] \emph {Algas:} Organismos unicelulares o pluricelulares simples con capacidad fotosintética.
+
+
+\item [] \emph {Aparejo de Pesca:}	Sistema de pesca preparado para la captura de recursos hidrobiológicos formado por líneas o cabos con anzuelos u otros aditivos. No utilizan paños de redes.
+
+\item [] \emph {Armador pesquero:} Es la persona que ejecuta por su cuenta y riesgo una actividad  pesquera extractiva  o de transformación a bordo, utilizando una o más embarcaciones pesqueras, cualquiera sea el tipo, tamaño, diseño o de especialidad de éstas, las que deberán estar identificadas e inscritas como tales en los registros a cargo de la Dirección General de Capitanías y Puertos.
+
+
+\item [] \textbf{B}
+
+\item [] \emph {Base de Datos:}	Almacén de información, generalmente digital, organizado de forma que la recuperación puede hacerse sobre una base selectiva.
+
+\item [] \emph {Bentónico:}	Organismos que viven en íntima relación con el fondo del mar, entre ellos: jaiba, centolla, almeja, macha, choros, etc.
+
+\item [] \emph {Bentopelágicos:} Organismos que temporalmente habitan el fondo o la superficie,
+
+\item [] \emph { Bentos:}	Comunidades de animales o plantas que habitan en el fondo marino o sobre el mismo.
+
+\item [] \emph {Biomasa:}	Abundancia absoluta expresada en peso del recurso, en el área de la pesquería.
+
+
+\item [] \emph {Bitácora de Pesca:}	Documento de registro de las actividades realizadas a bordo de una embarcación durante un viaje de pesca.
+
+\item [] \emph {Bivalvos:}	Grupo de moluscos que se caracterizan por tener dos valvas.. llamados tambien pelecípodos o lamelibranquios.
+
+\item [] \emph {Bodega aislada:}	Es aquella bodega que presenta revestimiento con un material aislante, como poliuretano u otros.
+
+\item [] \emph {Borda:}	Parte superior del casco de una embarcación en todo su contorno.
+
+\item [] \emph {Bote:}	Embarcación sin cubierta completa con o sin motor de propulsión.
+\item [] \emph {Boya:}	Objeto flotante, atado o anclado al fondo del mar, utilizado como ayuda a la navegación o como instrumento de flotación.
+
+\item [] \emph {Branquias (agallas):} Son los órganos característicos de la respiración de los peces.
+
+\item [] \emph {Braza:}	Medida náutica que es igual a 1,829 metros.
+
+\item [] \textbf{
+C }
+
+\item [] \emph {Cadena Alimenticia:}	Transferencia de energía alimenticia a través de una serie de organismos, con muchos pasos de comer y ser comido.
+
+\item [] \emph {Caleta:}	Sector costero en el cual una comunidad realiza actividades pesqueras de tipo artesanal.
+
+\item [] \emph {Calibración:}	Procedimiento mediante el cual se relaciona la lectura con la magnituid que se va a medir.
+
+\item [] \emph {Capacidad de Bodega:} Espacio de la embarcación que es destinado a almacenar la captura y se expresa en metros cúbicos (m3).
+
+\item [] \emph {Captura:}	Pesca extraída o desembarcada, equivalentea peso vivo.
+
+\item [] Número o peso total de organismos marinos extraídos en una faena de pesca.
+
+\item [] \emph {Captura Bruta:}	Peso total del pescado capturado por unidad de pesca en el mar.
+
+\item [] \emph {Captura Descartada:} Peso total en vivo del pescado entero de tamaño pequeño, que no es comercializable o de alguna manera que no se desea y que se descarta al momento de ser capturado o poco después.
+
+\item [] Parte de la captura bruta que, como pescado entero, es devuelto al mar en el momento de la captura.
+
+\item [] \emph {Captura Máxima Sostenible:}	Máxima captura que se puede tomar de una unidad de existencia dada, sin tener riesgo de interferir en la reproducción o el reclutamiento.
+
+\item [] \emph {Captura Nominal:}	Peso en vivo que equivale al desembarque vivo y fresco.
+
+\item [] \emph {Captura Retenida:}	Peso vivo del pescado retenido.
+
+\item [] \emph {Captura por Unidad de Esfuerzo (CPUE):}	Es un índice de la abundancia y del nivel de explotación de un recurso pesquero.
+
+\item [] \emph {Característica:}	 Cualquiera de los detalles o serie de detalles por las cuales puede ser reconocido un organismo u objeto.
+
+\item [] \emph {Características Merísticas:}	Aquellas características que se pueden contar, como vértebras, rayos de las aletas, escamas, etc.
+
+\item [] \emph {Cardumen:}	Cantidad considerable de peces, generalmente de la misma especie, que se desplazan o van juntos. Ej: anchovetas, sardinas.
+
+\item [] \emph {Cefalópodos:}	Grupo de moluscos que se caracterizan por presentar brazos alrededor de la cabeza.
+
+\item [] \emph {Centígrado:}	Referente a la escala de temperatura en grados centígrados o celsius.
+
+\item [] \emph {Centímetro:}	Unidad de medida de longitud que corresponde a la centésima parte de un metro.
+
+\item [] \emph {Congelado:}	Producto preservado mediante congelación a menos de 18°C, sin diferenciar el tamaño o forma de cada uno.
+Conserva:	Producto preservado mediante proceso de conservería, sin diferenciar el amaño, tipo de envase.
+
+\item [] \emph {Coordenadas:}	Sistema para localizar puntos sobre la superficie de la tierra, mediante un reticulado rectangular superpuesto y ligado a una proyección cartográfica.
+\item [] \emph {Crecimiento:}	Incremento en la talla o en el peso de un individuo como resultado de una serie e procesos químicos, osmóticos y de otros tipos.
+\item [] \emph {Crustáceos:}	Animales marinos de la clase artrópodos, entre los que se encuentran: cangrejos, centollas, langostinos, langsostas, etc.
+
+\item []  \textbf{D}
+
+\item [] \emph {Datos:}	Elementos, antecedentes u observaciones de los que parte en la investigación de un problema y de los cuales puede deducirse las consecuencias de un hecho.
+
+\item [] \emph {Demersal:}	Organismos que dependen del fondo para realizar algunas de sus funciones vitales. Entre las especies con este tipo de comportamiento se encuentran la merluza, cachema, coco, congrio, raya, etc.
+
+\item [] \emph {Depredador:}	Animal que captura otros animales para su alimentación.
+
+\item [] \emph {Desembarque:}	Captura no procesada descargada en el puerto o caleta, independiente de la zona de extracción, generalmente se expresa en toneladas.
+
+\item [] \textbf{E}
+
+\item [] \emph {Ecosonda:}	Instrumento que se emplea para medir profundidades, mediante el  tiempo que requiere una onda acústica o ultrasónica para recorrer la distancia entre la superficie y el fondo y para que regrese el eco.
+
+\item [] \emph {Epipelágico:}	Estrato del océano abierto desde la superficie hasta los 200 metros de profundidad. 
+
+\item [] \emph {Error:}	Resultado incorrecto obtenido en una observación, medición o cálculo.
+
+\item [] \emph {Escala:}	Razón entre la distancia medida sobre un mapa y la distancia correspondiente sobre el terreno.
+
+\item [] \emph {Esfuerzo de Pesca:}	Acción desarrollada por una unidad de pesca durante un tiempo definido y sobre un recurso hidrobiológico determinado.
+
+\item [] Conjunto de medios de  captura empleados por los pescadores sobre un stock.
+
+\item [] \emph {Esfuerzo Pesquero:}	Cantidad de trabajo realizado por una unidad pesquera en cierta unidad de tiempo.
+
+\item [] \emph {Eslora :}	Longitud del barco de proa a popa
+
+\item [] \emph {Espacio Muestral:}	Conjunto de posibles muestras seleccionadas mediante un procedimiento de muestreo dado. 
+
+\item [] \emph {Espiráculo:}	Par de aberturas redondeadas enla superficie dorsal de la cabeza, detrás de los ojos, se encuentra presentre en los tiburones y rayas.
+
+\item [] \emph {Especies:}	 Grupo de organismos con características estructurales y funcionales similares que, en la naturaleza, sólo se aparean entre sí y tienen un origen ancestral común cercano.
+
+\item [] \emph {Estandar:}	Patrón de referencia usado para establecer una unidad para las mediciones de una cantidad física.
+
+\item [] \textbf{F}
+
+
+\item [] \emph {Fauna Acompañante:}	 Comformada por especies hidrobiológicas que, por efecto tecnológico del arte o aparejo de pesca, se capturan cuando las embarcaciones pesqueras orientan su esfuerzo de pesca a la explotación de las especies-objetivo.
+
+\item [] \emph {Filtrador:}	Organismo acuático que obtiene su alimento filtrando el agua circundante.
+
+\item [] \emph {Flota Artesanal:}	Constituída por embarcaciones cuyos tamaños son menores a 30 m3 de capacidad de bodega.
+
+\item [] \emph {Flota Industrial:}	Constituída por embarcaciones mayores o iguales a 30 m3 de capacidad de bodega.
+
+\item [] \emph {Fresco refrigerado:}	Producto preservado mediante refrigeración entre 3° y - 3°C.
+
+\item [] \emph {Fuerza Centrífuga:}	Fuerza dirigida hacia fuera y que actúa sobre un cuerpo que describe una circunferencia.
+
+\item [] \textbf{G}
+
+\item [] \emph {Garete:}	Estar abandonado y sin rumbo.
+
+\item [] \emph {Gónadas:}	Órganos reproductores de los animales, en los que se forman los óvulos y espermatozoides.
+
+\item [] \emph {GPS:}	(Global Positioning System), sistema global de posicionamiento.
+
+\item [] \emph {Gradiente:}	Tasa de cambio de una cantidad variable.
+
+\item [] \emph {Gráfico:}	Cualquier representación visual de los datos.
+
+\item [] \emph {Grupo de Edad:}	Número entero de años a la cual es asignada la edad de un pez.
+
+
+\item [] \textbf{H}
+
+
+\item [] \emph {Hábitat:}	Lugar que ordinariamente habita un organismo o grupo de organismos.
+
+\item [] \emph {Harina de Pescado:} Producto deshidratado y desgrasado obtenido por cocción, prensado, secado y molienda de pescado o por partes de pescado de diferentes especies.
+
+\item [] \textbf{I}
+
+\item [] \emph {Indice Gonadosomático (IG):} Valor que representa el estado de madurez del pez. Corresponde al cuociente entre el peso de la gónada y el peso eviscerado del pez, se expresa en porcentaje y está referido a las hembras.
+\item [] \emph {Intervalo de confianza:}	Rango de valores dentro del cual se encuentra el valor de un parámetro con un determinado nivel de confianza.
+
+\item [] \textbf{J}
+
+
+\item [] \emph {Juvenil:}	Estado jóven de los animales, normalmente desde la fase post-larval hasta que alcanzan la madurez sexual.
+
+\item [] \textbf{L}
+
+
+\item [] \emph {Larva:}	Fase o etapa de desarrollo por los cuales pasa un individuo hasta alcanzar el estado adulto definitivo.
+
+
+\item [] \emph {Longitud Corporal:}	Longitud media del cuerpo de una cohorte.
+
+\item [] \emph {Longitud Standard:} Distancia desde el extremo del hocico hasta la última vertebra o urostilo.
+
+\item [] \emph {Longitud a la horquilla:} Distancia entre el extremo del hocico hasta la hendidura de la aleta caudal.
+
+\item [] \emph {Longitud Total:}	Distancia desde el extremo del hocico hasta el lóbulo mas grande de la aleta caudal.
+
+\item [] \textbf{M}
+
+
+\item [] \emph {Manga:}	Ancho de la embarcación, medida en el centro de la cubierta principal,  de la banda de la izquierda a la banda de la derecha.
+
+\item [] \emph {Moda:}	Valor que ocurre con mayor frecuencia.
+\item [] \emph {Moluscos:}	Animales de cuerpo blando sin segmentar, que pueden o nó tener concha calcárea. En este grupo se encuentran las almejas, choros, lapas, machas, conchas, pulpos, etc.
+\item [] \emph {Mortalidad:}	Valoración del número de muertes en una población.
+
+\item [] \emph {Mortalidad Natural (M):} Tasa instantánea de muerte de ejemplares causada por causas distintas a la pesca.
+
+\item [] \emph {Mortalidad por Pesca (F):}	Tasa instantánea de muerte de ejemplares causada por la actividad extractiva.
+
+\item [] \emph {Muelle:}	Es la construcción (madera y/o concreto), que saliendo de tierra se interna agua afuera y es apta para el atraque de naves, movilización de carga y pasajeros.
+
+\item [] \emph {Muestra:}	Parte de una población obtenida por selección.
+
+\item [] \emph {Muestreo:}	Acción de escoger partes o porciones de una población que son representativas de su calidad o condición media, con el objeto de estudiar la distribución de determinadas características del mismo.
+
+\item [] \emph {Muestreo Aleatorio Simple:}	o al Azar, es un método que consiste en seleccionar sin ningún tipo de privilegio para cualquier elemento, una muestra de ellos de una población de tamaño N.
+
+
+\item [] \textbf{N}
+
+\item [] \emph {Necton:}	Conjunto de organismos que nadan activamente venciendo los movimientos propios de las masas líquidas. Su tamaño puede fluctuar entre unos pocos centímetros y varios metros. La mayoría son mamíferos marinos, peces, moluscos marinos.
+\item [] \emph {Nudo:}	Unidad de velocidad que equivalea una milla náutica por hora; es decir 1 852 metros por hora ó 0.5144 metros por segundo. Un nudo equivale a 0.515 m/seg.
+
+\item [] \textbf{O}
+
+\item [] \emph {Oceánico:}	Aquella parte de la división pelágica hacia el mar adentro y que se inicia desde aproximadamente al final de la plataforma oceánica.
+\item [] \emph {Ola:}	Onda de gran amplitud que se forma en la superficie de las aguas por la acción del viento.
+\item [] \emph {Otolitos:}	Huesecillos del oido medio, cuya forma y tamaño son característicos en las diferentes especies  de peces, por lo que se utilizan con fines de identificación (Sistemática). Estan provistos de marcas o anillos concéntricos que sirven para la determinación de la edad del pez.
+
+
+\item [] \textbf{P}
+
+\item [] \emph {Parásito:}	Organismo que pasa parte o la totalidad de su vida viviendo a expensas de otro llamado ?huesped?.
+
+\item [] \emph {Pedúnculo Caudal:}	Parte angosta del cuerpo entre el extremo posterior de la aleta anal o dorsal y la base de la aleta caudal.
+
+\item [] \emph {Peces:}	Animales vertebrados acuáticos de sangre fría.
+
+\item [] \emph {Pelágica:}	Area del mar o de los océanos que se encuentra entre el fondo y la superficie.
+
+\item [] \emph {Pelágico:}	Organismos que viven y se desplazan libremente en las capas superficial y subsuperficial del océano y que realizan sus funciones vitales sin depender estrictamente de un sustrato. Este tipo de comportamiento lo presentan las especies: anchoveta, sardina, jurel, caballa, bonito, samasa, etc.
+
+\item [] \emph {Pesca para Consumo Humano Indirecto:} Aquella que suministra recursos hidrobiológicos para ser utilizados en la elaboración de alimento de animales.
+
+\item [] \emph {Pesca para Consumo Humano Directo:} Aquella que suministra recursos hidrobiológicos al estado fresco o procesado y son utilizados en forma directa por el hombre como fuente de alimentación.
+
+\item [] \emph {Pescador Artesanal:} Aquel que extrae recursos hidrobiológicos con o sin el uso de embarcación artesanal o arte de pesca y cuyo producto extraído se destina, preferentementemente, al consumo humano directo.
+
+\item [] \emph {Pesquería:}	Conjunto de actividades desrrolladas a partir de un tipo de recursos hidrobiológicos en una zona determinada y que comprende las fases de extracción, elaboración, comercialización y servicios.
+
+\item [] \emph {Población:}	Individuos que forman una unidad biológica proveniente de un mismo lugar de desove, con parámetros definidos y características que permiten individualizarse de otra población y podría estar formado por varios stocks pesqueros.
+
+\item [] \emph {Proa:}	Parte más aguda y delantera de la embarcación, en cuya dirección se navega.
+
+\item [] \emph {Puerto:}	Area de agua próxima a tierra que concede protección natural o artificial para las embarcaciones. Cuenta con equipos, maquinaria y personal capacitado para auxiliar y prestar ayuda a las embarcaciones.
+
+\item [] \emph {Puntal:}	Alto de una embarcación desde la quilla a la cubierta principal o primera cubierta.
+
+\item [] \textbf{Q}
+
+\item [] \emph {Quilla:}	Borde carnoso formado por escamas modificadas a cada lado del pedúnculo caudal.
+
+\item [] Parte principal inferior del esqueleto del casco, puede ser de metal o madera, es una pieza larga y resistente que corre de proa a popa.
+
+\item [] \textbf{R }
+
+\item [] \emph {Rango:}	Es la distancia entre el valor máximo y mínimo de un conjunto de datos.
+
+\item [] \emph {Reclutamiento:}	Incorporación de individuos jóvenes al stock.
+
+\item Cantidad de individuos de una especie  que cada año se agregan al área pesquera, puede ocurrir en cualquier momento de la vida de los animales, pero normalmente se da en la fase joven.
+
+\item [] \emph {Recursos Pelágicos:} Organismos que viven y se desplazan libremente en los estratos superficiales y subsuperficiales del mar, constituyendo grandes cardúmenes que realizan sus funciones vitales sin depender del sustrato. Entre las especies pelágicas de interés comercial están la achoveta, sardina, jurel, caballa, bonito y samasa.
+
+\item [] \emph {Recursos Inexplotados:} Aquellos recursos en los que no se ejercido explotación.
+
+\item [] \emph {Recurso Pesquero:} Organismos capturables y utilizables en la alimentación humana o empleados para cualquier propósito.
+ 
+\item [] \emph {Recurso Sobreexplotado:}	Recurso hidrobiológico cuyo nivel de explotación es mayor al recomendado técnicamente para su conservación a largo plazo.
+
+\item [] \emph {Red de arrastre:}	Red de pesca cónica que cuenta con un copo o saco en el extremo de la red para contener el pescado, en otro extremo una boca con dos prolongaciones llamadas alas o brazos. Estas pueden ser de arrastre de media agua  o de fondo.
+
+\item [] \emph {Red de cerco:}	Red de pesca de forma rectangular, con cierre en la parte inferior para la captura, efectuando el cerco del cardumen. Cuenta con  línea de corchos y línea de plomos, además de un cabo llamado gareta o jareta en la parte inferior que permite el cierre de la red por su parte inferior, permitiendo que la captura no se escape.
+
+\item [] \emph {Red de media agua:} Red llamada también pelágica, la sección delantera puede estar diseñada de una malla muy ancha que permite dirigir a los peces hasta el fondo de la red, la profundidad de ésta se controla con la ecosonda de red.
+
+\item [] \emph {Región:	Porción de un territorio.}
+
+\item [] \emph {Relieve:}	Irregularidades en el sentido vertical de una superficie.
+
+\item [] \emph {Rendimiento:}	Parte de la producción biológica de una masa de agua que es aprovechada por el hombre. Corresponde al cuociente entre la producción y la materia prima, se expresa en porcentaje.
+
+
+\item [] \textbf{S}
+
+\item [] \emph {Saco o copo:}	Parte posterior de la red de arrastre, que sirve para contener los recursos hidrobiológicos capturados.
+
+\item [] \emph {Salinidad:}	Medida de la cantidad de sales disueltas en el agua. Es la cantidad total de sólidos disueltos en el agua del mar en partes por mil en peso cuando todos los carbonatos se han convertido en oxidos, los bromuros y los yoduros  a cloruros y toda la materia orgánica estátotalmente oxidada.
+
+\item [] \emph {Salinidad del mar:	} Peso de las sales inorgánicas en un kilogramo de agua de mar, después que se ha sustituído todo el bromuro y el yoduro con una cantidad equivalente a cloruro; se ha sustituído todo el carbonato con una cantidad equivalente de óxido y la metria orgánica ha sido totalmente oxidada.
+
+
+\item [] \emph {Seguimiento:}	Toma rutinaria de información sobre las características de una población.
+
+\item [] \emph {Sobrepesca:}	Cuando se pesca con una intensidad suficientemente alta sobre ciertas porciones de una población reduciendo el reclutamiento anual.
+
+\item [] \emph {Sobrepoblación:}	Cuando la abundancia es tan excesiva que obliga a tomar medidas para reducirla.
+
+\item [] \emph {Stock:}	Fracción explotable de una población de un recurso hidrobiológico.
+
+\item [] \textbf{ T} 
+
+\item [] \emph {Talla Mínima:}	Longitud de los individuos que fijala autoridad competente para cada especie hidrobiológica, por debajo del cual se prohibe su extracción, procesamiento, transporte y comercialización.
+\item [] \emph {Tamaño de Malla:}	Longitud de la malla completamente estirada.
+
+\item [] \emph {Tasa de Mortalidad:}	Fracción de la población existente al comienzo de un año que morirá en el transcurso del mismo.
+
+\item [] \emph {Tasa de Supervivencia:}	Fracción de la población que sobrevive en el transcurso de un año.
+
+\item [] \emph {Tonelaje de Registro Bruto (TRB):}	Volumen total de la embarcación , incluidas las partes cubiertas de las superestructuras. El volumen de la embarcación se expresa en toneladas Morsoom de arqueo o de registro. Cada tonelada Moersoon equivale a 2.83 m3.
+
+\item [] \emph {Tonelaje de Registro Neto (TRN):}	Volumen de la parte útl del buque para carga y pesaje. Se expresa con las mismas unidades que el TRB.
+
+\item [] \textbf{U}
+
+\item [] \emph {Unidad de Esfuerzo:} Labor de una unidad de pesca en una unidad de operación o por una unidad de tiempo. Ej: días de pesca, viajes con pesca, horas de arrastre, etc.
+
+\item [] \emph {Unidad de Muestreo:} Unidad de la población marco que compone la muestra.
+
+\item [] \textbf{V }
+
+
+\item [] \emph {Veda:}	Acto administrativo establecido por una autoridad competente en que está prohibido capturar o extraer un recurso hidrobiológico en un área o determinada especie.
+
+\item [] \emph {Virar:}	Conjunto de operaciones que se llevan a cabo para recoger las redes o aparejos del agua, luego de concluida 
+Visceras:	Conjunto de órganos presentes en la cavidad abdominal oen otra cavidad corporal importante.
+
+\item [] \textbf{X}
+
+\item [] \emph {XBT:}	Batitermógrafo que utiliza un sensor desechable que sólo puede ser aprovechado una vez.
+
+
+\item [] \textbf{Z}
+
+\item [] \emph {ZCI:}	Zona de Convergencia Intertropical.
+\item [] \emph {Zooplancton:}	Formas animales del plancton. Incluye a varios tales como copépodos y eufausidos, medusas, ciertos protozoos, gusanos, moluscos y los huevos y larvas de animales bentónicos y nectónicos.
+
+\end{itemize}
+
+% ... (contenido del apéndice Y)
+
+
+\tableofcontents  Tabla de contenido 
+
+
+
+\newpage 
+\listoffigures  Índice de figuras 
+\newpage 
+\listoftables  Índice de tablas 
+\newpage 
+
+
+
+\backmatter 
+% Bibliografía 
+\include{bibliografia}
+
+
+\end{document}
